@@ -1346,7 +1346,7 @@
 </code></pre>
 <p>This additional information includes any symbol or global multiplier values applied, the base win amount, and the <code>lineIndex</code>, as defined in config.paylines = {[], ...}``</p>
 <h3 id="multiplier-methods">Multiplier methods</h3>
-<p>For generality all win methods inherit functions from the <code>MultiplierStrategy</code> class. By calling <code>apply_mult()</code> with a specified strategy (<code>global</code>, <code>symbol</code>, <code>combined</code>), base win amount and winning symbol positions, total win amounts are returned inclusive of any global multipliers or symbol multipliers. By default, if the <code>combined</code> or <code>symbol</code> strategy is used, multiplier values are added together from winning symbol positions, where the symbol object contains the <code>multiplier</code> attribute.</p>
+<p>For generality all win methods utilize functions from the <code>wins/multiplier_strategy</code> file. By calling <code>apply_mult()</code> with a specified strategy (<code>global</code>, <code>symbol</code>, <code>combined</code>), base win amount and winning symbol positions, total win amounts are returned inclusive of any global multipliers or symbol multipliers. By default, if the <code>combined</code> or <code>symbol</code> strategy is used, multiplier values are added together from winning symbol positions, where the symbol object contains the <code>multiplier</code> attribute.</p>
 <h3 id="overlay-values">Overlay values</h3>
 <p>The cluster and scatter pay sample games, there is an <code>overlay</code> key included ine <code>win_data</code> "meta" tag of the structure:</p>
 <pre><code class="language-python">'meta': {
