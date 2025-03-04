@@ -22,7 +22,7 @@
     
     
       
-        <title>Events - carrot-math-engine</title>
+        <title>Events - Carrot Math Engine</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="carrot-math-engine" class="md-header__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../.." title="Carrot Math Engine" class="md-header__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../assets/carrot.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            carrot-math-engine
+            Carrot Math Engine
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -210,12 +210,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="carrot-math-engine" class="md-nav__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../.." title="Carrot Math Engine" class="md-nav__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../assets/carrot.png" alt="logo">
 
     </a>
-    carrot-math-engine
+    Carrot Math Engine
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1158,7 +1158,28 @@
         
   
   <span class="md-ellipsis">
-    Optimization Algorithm [NA]
+    Optimization Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Documentation
     
   </span>
   
@@ -1214,16 +1235,16 @@
 <li>....</li>
 </ul>
 <p>The events are crucial as all events need to be handled by the front-end. The user is free to determine their event structure, though to follow the example games, all events have the format,</p>
-<pre><code class="language-python">    event = {
-        &quot;index&quot;: [int],
-        &quot;type&quot;: [str],
-        &quot;&lt;field_1&gt;&quot;: [T],
-        ...
-        &quot;&lt;field_n&gt;&quot;: [T]
-    }
+<pre><code class="language-python">event = {
+    &quot;index&quot;: [int],
+    &quot;type&quot;: [str],
+    &quot;&lt;field_1&gt;&quot;: [T],
+    ...
+    &quot;&lt;field_n&gt;&quot;: [T]
+}
 </code></pre>
 <p><code>"index"</code> keeps track of the current number of events in a simulation, <code>"type"</code> is a unique keyword used to identify an event and is generally a one-word description. <code>"fields"</code> are strings who's corresponding value can have any data-type, as required. Once constructed, the event is appended to the book, "events" field":</p>
-<pre><code class="language-python">    gamestate.book.add_event(event)
+<pre><code class="language-python">gamestate.book.add_event(event)
 </code></pre>
 <p>Events are handled separately in the gamestate to game calculations or executables. They are imported explicitly and not attached to the gamestate object. Once the math-engine has made the appropriate board transformation or action, the event should be emitted immediately, as it will provide a <em>snapshot</em> of the current state of the game. For example:</p>
 <pre><code class="language-python"> from src.Events.Events import update_freespin_event

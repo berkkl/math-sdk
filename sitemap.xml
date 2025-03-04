@@ -2,126 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/general_overview/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://github.com/twist-gaming/carrot-math-engine/fe_assets/fe_readme/</loc>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/events_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/force_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/repeat_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/win_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/configuration_section/betmode_dist/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/configuration_section/betmode_overview/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/configuration_section/config_overview/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/syms_board_section/board_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/gamestate_section/syms_board_section/symbol_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/optimization_section/optimization_algorithm/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/overview_section/game_format/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/overview_section/game_struct/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/overview_section/state_overview/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/sample_section/sample_games/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/board_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/cluster_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/config_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/event_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/executables_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/file_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/lines_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/scatter_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/state_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/tumble_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/ways_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/source_section/win_manager/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/tests_section/test_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/uploads_section/upload_info/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://github.com/twist-gaming/carrot-math-engine/utils_section/utilities/</loc>
-         <lastmod>2025-02-27</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
 </urlset>

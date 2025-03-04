@@ -22,7 +22,7 @@
     
     
       
-        <title>Symbols - carrot-math-engine</title>
+        <title>Symbols - Carrot Math Engine</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="carrot-math-engine" class="md-header__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../../.." title="Carrot Math Engine" class="md-header__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../../assets/carrot.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            carrot-math-engine
+            Carrot Math Engine
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -210,12 +210,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="carrot-math-engine" class="md-nav__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../../.." title="Carrot Math Engine" class="md-nav__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../../assets/carrot.png" alt="logo">
 
     </a>
-    carrot-math-engine
+    Carrot Math Engine
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1200,7 +1200,28 @@
         
   
   <span class="md-ellipsis">
-    Optimization Algorithm [NA]
+    Optimization Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../fe_assets/fe_readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Documentation
     
   </span>
   
@@ -1280,26 +1301,29 @@
         self.assign_paying_bool(config)
 </code></pre>
 <p>When a new game-board is drawn, a 2D array of symbol objects are generated. At a minimum, the symbol will have the attributes:</p>
-<ol>
+<ul>
 <li>Name<ul>
 <li>[string] shorthand name, typically 1 or 2 letters</li>
 </ul>
 </li>
 <li>special_functions<ul>
-<li>Within the <code>GameStateOverride</code> class, special functions can be applied to a symbol as soon as the object is created. This is done through the abstract function, for example:
-<code>python
-    def assign_special_sym_function(self):
+<li>Within the <code>GameStateOverride</code> class, special functions can be applied to a symbol as soon as the object is created. This is done through the abstract function, for example:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">    def assign_special_sym_function(self):
         self.special_symbol_functions = {
-            "W": [self.assign_mult_property],
+            &quot;W&quot;: [self.assign_mult_property],
         }
     def assign_mult_property(self, symbol):
         multiplier_value = get_random_outcome(
-            self.get_current_distribution_conditions()["mult_values"][self.gametype]
+            self.get_current_distribution_conditions()[&quot;mult_values&quot;][self.gametype]
         )
-        symbol.assign_attribute({"multiplier": multiplier_value})</code>
-<code>assign_special_sym_function()</code> is called when the <code>GameState</code> is initially created. In this example, we are assigning a multiplier value to any new wild ('W') which is created. Any action defined within <code>self.special_symbol_functions</code> with the format <code>{&lt;name&gt;: @callable_func}</code> will be assigned to the <code>special_functions</code> property.</li>
-</ul>
-</li>
+        symbol.assign_attribute({&quot;multiplier&quot;: multiplier_value})
+</code></pre>
+<div class="language-text highlight"><pre><span></span><code>`assign_special_sym_function()` is called when the `GameState` is initially created. In this example, we are assigning a multiplier value to any new wild (&#39;W&#39;) which is created. Any action defined within `self.special_symbol_functions` with the format `{&lt;name&gt;: @callable_func}` will be assigned to the `special_functions` property.
+</code></pre></div>
+<ul>
 <li>is_special<ul>
 <li>This property is assigned as <code>False</code> by default unless the name appears as a value within <code>config.special_symbols</code></li>
 </ul>
@@ -1308,11 +1332,11 @@
 <li>Properties appearing in <code>config.special_functions = {'property': [name]}</code> are set to <code>True</code> by default. </li>
 </ul>
 </li>
-<li><code>assign_paying_bool</code><ul>
+<li>assign_paying_bool()<ul>
 <li>This function assigns the properties <code>is_paying</code> and <code>paytable</code>. If the symbol name appears in <code>config.paytable</code> <code>is_paying</code> is set to <code>True</code> and the relevant paytable values are assigned to <code>paytable</code>. Otherwise these values are set to <code>False</code> and <code>None</code> respectively.</li>
 </ul>
 </li>
-</ol>
+</ul>
 <h2 id="symbol-attributes">Symbol Attributes</h2>
 <p>In addition to the application of <code>special_functions</code>, attributes are an important characteristic of symbol objects, particularly for checking if there are any special symbols on the game-board which require additional actions. For example if we want to check if a given symbol has a <code>prize</code> or <code>multiplier</code> attribute:</p>
 <pre><code class="language-python">    if self.board[reel][row].check_attribute('prize','multiplier'):

@@ -22,7 +22,7 @@
     
     
       
-        <title>Force Files - carrot-math-engine</title>
+        <title>Force Files - Carrot Math Engine</title>
       
     
     
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="carrot-math-engine" class="md-header__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../.." title="Carrot Math Engine" class="md-header__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../assets/carrot.png" alt="logo">
 
@@ -103,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            carrot-math-engine
+            Carrot Math Engine
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -210,12 +210,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="carrot-math-engine" class="md-nav__button md-logo" aria-label="carrot-math-engine" data-md-component="logo">
+    <a href="../.." title="Carrot Math Engine" class="md-nav__button md-logo" aria-label="Carrot Math Engine" data-md-component="logo">
       
   <img src="../../assets/carrot.png" alt="logo">
 
     </a>
-    carrot-math-engine
+    Carrot Math Engine
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1207,7 +1207,28 @@
         
   
   <span class="md-ellipsis">
-    Optimization Algorithm [NA]
+    Optimization Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontend Documentation
     
   </span>
   
@@ -1279,21 +1300,21 @@
 
 <h1 id="custom-defined-events">Custom Defined Events</h1>
 <p>Every betmode will have a corresponding <code>force_record_&lt;betmode&gt;.json</code>. This file records the <code>book-id</code> corresponding to a custom defined search key. Anytime <code>self.record()</code> is called where</p>
-<pre><code class="language-python">    def record(self, description: dict) -&gt; None:
-        self.temp_wins.append(description)
-        self.temp_wins.append(self.book_id)
+<pre><code class="language-python">def record(self, description: dict) -&gt; None:
+    self.temp_wins.append(description)
+    self.temp_wins.append(self.book_id)
 </code></pre>
 <p>The current simulation number will be appended to the description/key if it exists, otherwise a new dictionary entry is made based on the description passed to the <code>record()</code> function. For example, we may want to keep track of how many Scatter symbols caused a freegame trigger. Which will be useful for later analysis to investigate the frequency of any custom defined event. In the freespin trigger executable function for example,</p>
-<pre><code class="language-python">    def run_freespin_from_base(self, scatter_key: str = &quot;scatter&quot;) -&gt; None:
-        self.record(
-            {
-                &quot;kind&quot;: self.count_special_symbols(scatter_key),
-                &quot;symbol&quot;: scatter_key,
-                &quot;gametype&quot;: self.gametype,
-            }
-        )
-        self.update_freespin_amount()
-        self.run_freespin()
+<pre><code class="language-python">def run_freespin_from_base(self, scatter_key: str = &quot;scatter&quot;) -&gt; None:
+    self.record(
+        {
+            &quot;kind&quot;: self.count_special_symbols(scatter_key),
+            &quot;symbol&quot;: scatter_key,
+            &quot;gametype&quot;: self.gametype,
+        }
+    )
+    self.update_freespin_amount()
+    self.run_freespin()
 </code></pre>
 <p>This will ultimately output a <code>force_record_&lt;betmode&gt;.json</code> with the entries:</p>
 <pre><code class="language-json">[
