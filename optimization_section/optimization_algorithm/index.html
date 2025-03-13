@@ -1151,6 +1151,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Optimization Algorithm
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1161,6 +1173,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-optimization-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up optimization parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up optimization parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-optimization-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing optimization script
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1207,6 +1289,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-optimization-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up optimization parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up optimization parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executing-optimization-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executing optimization script
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1223,6 +1364,31 @@
 
 <h1 id="optimizing-win-distributions-with-iterative-weighted-sampling">Optimizing win distributions with iterative weighted sampling</h1>
 <p>A discussion of how the provided optimization algorithm operates can be viewed by <a href="../../distribution_optimization.pdf">downloading this paper</a>.</p>
+<p>The aforementioned algorithm is implemented in the Rust programming language, this program compiles down to a binary executable. If the program is being run for the first time, or if there are modifications made to the <em>main.rs</em> file, the binary should be rebuilt using:</p>
+<pre><code class="language-sh">cargo build --release
+</code></pre>
+<h2 id="setting-up-optimization-parameters">Setting up optimization parameters</h2>
+<p>The optimization algorithm parameters can be setup and passed within the <em>run.py</em> file
+Game-specific parameters should be set using the <strong>OptimizationSetup</strong> class. This Class takes as input the game configuration class and appends <em>opt_params</em>. This is a dictionary where the keys are the betmode names and have the required keys:</p>
+<pre><code class="language-python">opt_params = &lt;mode_name&gt; : {
+    &quot;conditions&quot;: ...
+    &quot;scaling&quot;: ...
+    &quot;parameters: 
+}
+</code></pre>
+<p>Each key has a corresponding construction class within <code>optimizaation_algorithm/optimization_config.py</code></p>
+<h4 id="conditions">Conditions</h4>
+<p>The <code>conditions</code> key has the setup class <code>ConstructConditions</code>. This key separates out specific simulation numbers which the optimization algorithm is applied to. The optimization program requires knowing what RTP to optimize a subset of solutions to. 
+This is generally separated out into events where it is desirable to control the frequency of such an event occurring. Such as freegame, max wins or 0-win hit-rates. For each of these win types, we need to have a well defined RTP, meaning that we need 2 of the 3 variables, <em>RTP</em>, <em>average wins</em>, <em>hit-rates</em>. You will notice that for the <em>0 win</em> conditions in the sample game the hit-rate is undefined (<em>x</em>), this is allowed because it is a free-variable. Since all hit-rates of all win-types must sum to be exactly 1, we are able to deduce the hit-rate using 1 - (sum of all other win-type allocations).</p>
+<h4 id="scaling">Scaling</h4>
+<p>We are able to bias particular win-ranges within the optimization program. We initially generating our trial distributions, we can artificially increase or decrease the the Gaussian weights within this range by a particular scale factor. We can also assign a probability of these weights being assigned for each distribution created. Note that biasing particular ranges by a significant amount can be lead to a lower likelihood of a randomly assigned distribution being accepted, so its effect should be used carefully. </p>
+<h4 id="parameters">Parameters</h4>
+<p>This input is used to construct a setup file red by the optimization tool. It defines the number of distributions to trial before combination, minimum and maximum mean-to-median distribution scores to control volatility as well as the number of simulated test spins to run in order to rank viable distributions. </p>
+<h2 id="executing-optimization-script">Executing optimization script</h2>
+<p>Once the game specific <code>OptimizationSetup</code> class is constructed, a <code>math_config.json</code> file is generated containing all relevant game parameters in conjunction with a <code>setup.txt</code> file detailing simulation setup optimization parameters, handled with the <code>OptimizationExecution</code> class. Within the <code>run.py</code> file we can specify which game modes we would like to optimize and directly run the Rust binary using:</p>
+<pre><code class="language-python">    optimization_modes_to_run = [&quot;base&quot;, &quot;bonus&quot;]
+    OptimizationExecution().run_all_modes(config, optimization_modes_to_run, rust_threads)
+</code></pre>
 
 
 
