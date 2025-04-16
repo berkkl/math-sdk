@@ -1284,71 +1284,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1409,13 +1344,13 @@
 <li><code>freegame</code> scenarios</li>
 <li><code>max-win</code> scenarios</li>
 </ol>
-<p>The purpose of segmenting these game outcomes is to ensure that there are sufficiently many simulations scenarios satisfying a certain criteria. For example if the hit-rate for a max-win is 1% of the avaliable RTP for a game with a 5000x payout would be 1 in 500,000 outcomes. Though if we are only producing 1 Million simulations in total for this mode, we would like to have more than 2 simulations in total which result in the maximum win amount. This reduces the posibility of any players seeing the same outcomes for a specific win amount. </p>
-<p>In the aforementioned list <code>0</code> dictates that the payout multiplier is ==0 for that simulation number. <code>basegame</code> is essentially any basegame spin where the payout is &gt;0  and the <code>freegame</code> is not triggered. <code>freegame</code> is any scenario where the <code>freegame</code> is triggerd from the basegame. <code>max-win</code> is any outcome where the maximum payout multiplier is awarded.</p>
+<p>The purpose of segmenting these game outcomes is to ensure that there are sufficiently many simulations scenarios satisfying a certain criteria. For example if the hit-rate for a max-win is 1% of the available RTP for a game with a 5000x payout would be 1 in 500,000 outcomes. Though if we are only producing 1 Million simulations in total for this mode, we would like to have more than 2 simulations in total which result in the maximum win amount. This reduces the possibility of any players seeing the same outcomes for a specific win amount. </p>
+<p>In the aforementioned list <code>0</code> dictates that the payout multiplier is ==0 for that simulation number. <code>basegame</code> is essentially any basegame spin where the payout is &gt;0  and the <code>freegame</code> is not triggered. <code>freegame</code> is any scenario where the <code>freegame</code> is triggered from the basegame. <code>max-win</code> is any outcome where the maximum payout multiplier is awarded.</p>
 <p>This segmentation of wins is also used by the <a href="../../optimization_section/optimization_algorithm/">optimization algorithm</a>.</p>
-<p>Pertanent to this section though, the simulation acceptance criteria is intergral to the <code>repeat</code> condition implented in all sample games. When the <code>GameState</code> is setup, the acceptance criteria is assigned to a specific simulation number before any simulations are carried out. So simulation 10, for example, is predetermined to be a simulation which triggers a <code>freegame</code>. </p>
-<p>When the <code>run_spin()</code> function is called and the game-round ends, wheather or not the simulation is recorded and added to the <a href="../../overview_section/state_overview/">library</a> is partially determined by the final win condition. If the only condition is that the simulation must be a <code>0</code> payout, then the <code>final_win</code> value is checked. If this condition is satisfied the <code>self.repeat = False</code> and the outcome is saved. Likewise if a particular simualation is determined to be <code>freegame</code> criteria, at the end of the spin we verify if the freegame has been triggered and accept the simulation result if so. There can be as many conditions are required in the <code>self.check_repeat()</code> function. Just be aware that the more stringent the criteria, the longer a simulation will likely take to run. This time can be quite substancial if the required criteria is unlikely to be achieved naturally. For the <code>max-win</code> scenarios for example, generally a specificly made reelstrip is used, and the probability if achieving higher multipliers, prizes etc.. is dictated  in the bet-mode <a href="../configuration_section/betmode_dist/">distribution</a>.</p>
+<p>Pertinent to this section though, the simulation acceptance criteria is integral to the <code>repeat</code> condition implemented in all sample games. When the <code>GameState</code> is setup, the acceptance criteria is assigned to a specific simulation number before any simulations are carried out. So simulation 10, for example, is predetermined to be a simulation which triggers a <code>freegame</code>. </p>
+<p>When the <code>run_spin()</code> function is called and the game-round ends, whether or not the simulation is recorded and added to the <a href="../../overview_section/state_overview/">library</a> is partially determined by the final win condition. If the only condition is that the simulation must be a <code>0</code> payout, then the <code>final_win</code> value is checked. If this condition is satisfied the <code>self.repeat = False</code> and the outcome is saved. Likewise if a particular simulation is determined to be <code>freegame</code> criteria, at the end of the spin we verify if the freegame has been triggered and accept the simulation result if so. There can be as many conditions are required in the <code>self.check_repeat()</code> function. Just be aware that the more stringent the criteria, the longer a simulation will likely take to run. This time can be quite substantial if the required criteria is unlikely to be achieved naturally. For the <code>max-win</code> scenarios for example, generally a specifically made reelstrip is used, and the probability if achieving higher multipliers, prizes etc.. is dictated  in the bet-mode <a href="../configuration_section/betmode_dist/">distribution</a>.</p>
 <h2 id="predetermining-acceptance">Predetermining Acceptance</h2>
-<p>While it would be useful to run the simulations first and then assign the distribution criteria afterwards, this can cause issues when multi-threading larger simulation batches. Simulations relating to max-wins for example typically take substancially longer to succede than say <code>0</code> win simulations. This means that all crietria except the max-win are likely to be filled first, leaving the final thread to deal with many or all of the max-win simulations. For this reason, the <code>quota</code> in the BetMode distribution conditions is used in conjunction with the total number of simulations. </p>
+<p>While it would be useful to run the simulations first and then assign the distribution criteria afterwards, this can cause issues when multi-threading larger simulation batches. Simulations relating to max-wins for example typically take substantially longer to succeed than say <code>0</code> win simulations. This means that all criteria except the max-win are likely to be filled first, leaving the final thread to deal with many or all of the max-win simulations. For this reason, the <code>quota</code> in the BetMode distribution conditions is used in conjunction with the total number of simulations. </p>
 
 
 

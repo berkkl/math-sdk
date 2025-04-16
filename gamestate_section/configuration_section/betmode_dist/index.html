@@ -1246,71 +1246,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1353,13 +1288,13 @@
 </ul>
 </li>
 <li>Quota<ul>
-<li>This is the amount of simulations (as a ratio of the total number of bet-mode simulation) which need to satisfy the corresponding criteria. The quota is normalised when assigning criteria to simulations, so the sum of all quotas does not need to be 1. There is a minimum of 1 simulation assigned per criteria.</li>
+<li>This is the amount of simulations (as a ratio of the total number of bet-mode simulation) which need to satisfy the corresponding criteria. The quota is normalized when assigning criteria to simulations, so the sum of all quotas does not need to be 1. There is a minimum of 1 simulation assigned per criteria.</li>
 </ul>
 </li>
 <li>
 <p>Conditions</p>
 <ul>
-<li>Conditions can have an arbitary number of keys. Though the required keys are:<ul>
+<li>Conditions can have an arbitrary number of keys. Though the required keys are:<ul>
 <li><code>reel_weights</code> </li>
 <li><code>force_wincap</code></li>
 <li><code>force_freegame</code></li>
@@ -1369,7 +1304,7 @@
 <p>Note that <code>force_wincap</code> and <code>force_freegame</code> are set to <code>False</code> by default and do not have to be explicitly added.</p>
 <p>The most common use for the Distribution Conditions is when drawing a random value using the BetMode's built-in method <code>get_distribution_conditions()</code>. i.e.
 <code>python
-    multiplplier = get_random_outcome(betmode.get_distribution_conditions()['mult_values'])</code>
+    multiplier = get_random_outcome(betmode.get_distribution_conditions()['mult_values'])</code>
 Or to check if a board forcing the <code>freegame</code> should be drawn with:
 <code>python
 if get_distribution_conditions()['force_freegame']:
@@ -1377,8 +1312,8 @@ if get_distribution_conditions()['force_freegame']:
 </li>
 <li>
 <p>Win criteria (optional)</p>
-<p>There is also a <code>win_criteria</code> condition which incorporates a payout multiplier into the simulation acceptance. The two commonly used condtions are <code>win_criteria = 0.0</code> and <code>win_criteria = self.wincap</code>. When calling <code>self.check_repeat()</code> at the end of a simulation, if <code>win_criteria</code> is not <code>None</code> (default), the final win amount must match the value passed. </p>
-<p>The intention behind betmode distribution conditions is to give the option to handle game actions in a way which depends on the (known) expected simulation. This is most clear if for example a simulation is known to correspond to a <code>max-win</code> scenario. Instead of repeatly drawing random outcomes which are most likely to be rejected, we can alter the probabilties of larger payouts occurring by biasing a particular reelset, weighting larger prize or multiplier values etc..</p>
+<p>There is also a <code>win_criteria</code> condition which incorporates a payout multiplier into the simulation acceptance. The two commonly used conditions are <code>win_criteria = 0.0</code> and <code>win_criteria = self.wincap</code>. When calling <code>self.check_repeat()</code> at the end of a simulation, if <code>win_criteria</code> is not <code>None</code> (default), the final win amount must match the value passed. </p>
+<p>The intention behind betmode distribution conditions is to give the option to handle game actions in a way which depends on the (known) expected simulation. This is most clear if for example a simulation is known to correspond to a <code>max-win</code> scenario. Instead of repeated drawing random outcomes which are most likely to be rejected, we can alter the probabilities of larger payouts occurring by biasing a particular reelset, weighting larger prize or multiplier values etc..</p>
 </li>
 </ol>
 

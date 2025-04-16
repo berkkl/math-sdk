@@ -1320,71 +1320,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1478,9 +1413,9 @@
 <p>The primary data file output when simulations are run are the book files. These contain summary simulation information such as the final payout multiplier, basegame and freegame win contributions, the simulation criteria and simulation events. The contents of <code>book.events</code> is the information returned by the RGS <code>play/</code> API response. </p>
 <p>The uncompressed <code>books/</code> files are used within the front-end testing framework and should be used to debug events. Only a small number of simulations should be run due to the file size. Compressed book files are what is uploaded to <code>AWS</code> and consumed by the RGS when games are being uploaded. Only data from compressed books will be returned from the <code>play/</code> API.</p>
 <h3 id="force-files">Force files</h3>
-<p>Each bet mode will output a file of the format <code>force_mode.json</code>. Every time the <code>.record()</code> function is called, the decription keys used as input are appended to the file. If the key already exists, the <code>book-id</code> is appended to the array. This file is used to count instances of particular events. The optimisation algorithm also makes use of these keys to identify max-win and freegame books. Once all bet mode simulations are finished, a <code>force.json</code> file is output which contains all the unique fields and keys.</p>
+<p>Each bet mode will output a file of the format <code>force_mode.json</code>. Every time the <code>.record()</code> function is called, the description keys used as input are appended to the file. If the key already exists, the <code>book-id</code> is appended to the array. This file is used to count instances of particular events. The optimization algorithm also makes use of these keys to identify max-win and freegame books. Once all bet mode simulations are finished, a <code>force.json</code> file is output which contains all the unique fields and keys.</p>
 <h3 id="lookup-tables">Lookup tables</h3>
-<p>The final payout multiplier for each simulation is summarised in the <code>lookUpTable_mode.csv</code>. This is the file accessed by the optimization algorithm, which works by adjusting the weights, initially assigned to <code>1</code>. There is also a <code>IdToCriteria</code> file which indicates the win criteria required by a specific simulation number, and a <code>Segmented</code> file used to identify what gametype contributed to the final payout multiplier. Both these additional files are not typically uploaded to the ACP and are instead used for various analysis functions.</p>
+<p>The final payout multiplier for each simulation is summarized in the <code>lookUpTable_mode.csv</code>. This is the file accessed by the optimization algorithm, which works by adjusting the weights, initially assigned to <code>1</code>. There is also a <code>IdToCriteria</code> file which indicates the win criteria required by a specific simulation number, and a <code>Segmented</code> file used to identify what gametype contributed to the final payout multiplier. Both these additional files are not typically uploaded to the ACP and are instead used for various analysis functions.</p>
 <h3 id="config-files">Config files</h3>
 <p>There are three config files generated after all simulations and optimizations are run. <code>config_math.json</code> is used by the optimization algorithm and contains all relevant bet mode details, RTP splits and optimization parameters. <code>config_fe.json</code> is used by the front-end frame work and contains symbol information, padding reels and bet mode details which need to be displayed to players. <code>config.json</code> contains bet mode information and file hash information and used used by the RGS to determine and verify changes to files being uploaded to the ACP.</p>
 <h3 id="file-path-construction">File path construction</h3>

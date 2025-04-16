@@ -1483,71 +1483,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1831,7 +1766,7 @@ on the final Wild since the base payout 3W &gt; 5L4</p>
 <h4 id="basegame_1">Basegame</h4>
 <p>Minimum of 3 Scatter symbols are needed to enter the freegame. Maximum of 1 Scatter per reel.</p>
 <h4 id="freegame-rules">Freegame rules</h4>
-<p>Wild symbols have multipliers ranging from 1x to 5x. Multiplier values compound multiplicitivly (unlike lines games where multiplier values add)</p>
+<p>Wild symbols have multipliers ranging from 1x to 5x. Multiplier values compound multiplicatively (unlike lines games where multiplier values add)</p>
 <h2 id="cluster-based-win-game">Cluster-based win game</h2>
 <p>Clusters of 5 or more like-symbols are removed from the board, and symbols above on the reelstrip
 fall to fill their place.</p>
@@ -1845,7 +1780,7 @@ There is a global multiplier, which increases by +1 for every freespin and does 
 A minimum of 3 scatters are required for re-triggers</p>
 <h4 id="notes">Notes:</h4>
 <p>Because of the separation between basegame and freegame types - there is an additional freespin entry check to check of the criteria requires a forced 
-freespin condition. Otherwise, occurences of Scatter symbols tumbling onto the board during basegame criteria may appear.</p>
+freespin condition. Otherwise, occurrences of Scatter symbols tumbling onto the board during basegame criteria may appear.</p>
 <h2 id="scatter-pays-game">Scatter-Pays Game</h2>
 <h4 id="summary">Summary:</h4>
 <ul>
@@ -1868,7 +1803,7 @@ If there is a multiplier symbol on the board, this is added to the global multip
 The total number of freegame is 2 * (number of Scatters on board). To account for this the usual 'updateTotalFreeSpinAmount' function is overridden 
 in the game_executables.py file.</p>
 <h4 id="event-descriptions">Event descriptions</h4>
-<p>"winInfo" Summarises winning combinations. Includes multipliers, symbol positions, payInfo [passed for every tumble event]
+<p>"winInfo" Summarizes winning combinations. Includes multipliers, symbol positions, payInfo [passed for every tumble event]
 "tumbleBanner" includes values from the cumulative tumble, with global mult applied
 "setWin" this the result for the entire spin (from on Reveal to the next). Applied after board has stopped tumbling
 "seTotalWin" the cumulative win for a round. In the base-game this will be equal to the setWin, but in the bonus it will incrementally increase </p>
@@ -1894,7 +1829,7 @@ No retriggers in freegame. </p>
 <h4 id="superspin">superspin</h4>
 <p>This is a <em>hold em'</em> style game.
 The player can purchase a spin for 25x, and starts with 3 <em>lives</em>
-Each time a prize symbol lands on the board, the 3 avaliable spins reset. 
+Each time a prize symbol lands on the board, the 3 available spins reset. 
 Prizes are sticky and evaluated once the player has no new spins remaining. </p>
 <p>This game has a purchase-only 'super-spin' mode. This mode can only be activated through a buy menu and cannot be accessed using Scatters like bonus-games</p>
 

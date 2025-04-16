@@ -1311,71 +1311,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1537,7 +1472,7 @@ Next the <code>BetMode</code> classes are defined. Generally there would be at a
     )
 </code></pre>
 <h2 id="gamestate-file">Gamestate file</h2>
-<p>When any simulation is run, the entry point will be the <code>run_spin()</code> function, which lives in the <code>GameState</code> class. <code>GameExecuatables</code> and <code>GameCalculations</code> are child classes of <code>GameState</code> and also deal with game specific logic.</p>
+<p>When any simulation is run, the entry point will be the <code>run_spin()</code> function, which lives in the <code>GameState</code> class. <code>GameExecutables</code> and <code>GameCalculations</code> are child classes of <code>GameState</code> and also deal with game specific logic.</p>
 <p>The generic structure would follow the format:</p>
 <pre><code class="language-python">def run_spin(self, sim):
     self.reset_seed(sim) #seed the RNG with the simulation number 

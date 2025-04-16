@@ -1246,71 +1246,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1346,7 +1281,7 @@
 
 
 <h1 id="cluster-pays">Cluster Pays</h1>
-<p>Cluster games award wins when there are sufficiently many neighbouring like-symbols. Neighbours must share the same reel or row, where diagonal connections do not count towards the cluster size. A minimum of 5 like-symbols is typical, though this can be defined in <code>GameConfig</code> class. Since it is possible for up to <code>num_rows * num_columns</code> winning symbols to occur, it is common to define a particular payout range. For example <code>5 kind</code> pays <code>p1</code> <code>6-7 kind</code> to pay <code>p2</code>, <code>8-10 kind</code> to pay <code>p3</code> and <code>12+</code> symbols pay <code>p4</code> etc... Instead of manually including all possible pay combinations in <code>config.paytable</code> there is a <code>convert_range_table()</code> function in the Config class which takes in a symbol range, name and payout amount which is used to generate all <code>config.paytable</code> entries. This pay group should be of the format:</p>
+<p>Cluster games award wins when there are sufficiently many neighboring like-symbols. Neighbours must share the same reel or row, where diagonal connections do not count towards the cluster size. A minimum of 5 like-symbols is typical, though this can be defined in <code>GameConfig</code> class. Since it is possible for up to <code>num_rows * num_columns</code> winning symbols to occur, it is common to define a particular payout range. For example <code>5 kind</code> pays <code>p1</code> <code>6-7 kind</code> to pay <code>p2</code>, <code>8-10 kind</code> to pay <code>p3</code> and <code>12+</code> symbols pay <code>p4</code> etc... Instead of manually including all possible pay combinations in <code>config.paytable</code> there is a <code>convert_range_table()</code> function in the Config class which takes in a symbol range, name and payout amount which is used to generate all <code>config.paytable</code> entries. This pay group should be of the format:</p>
 <pre><code class="language-python">    paygroup = {
         ((min_combination[int], max_combination[int]), name[str]) : payout[float],
         ... 
@@ -1354,7 +1289,7 @@
 
 </code></pre>
 <p>Ranges defined in <code>min_combination</code> and <code>max_combination</code> are inclusive, so for example if the <code>5-kind</code> payout for symbol <code>H1</code> pays <code>10x</code>, this would be written as: <code>((5,5),H1): 10</code>.</p>
-<p>Often (though not always) cluster pays games include a tumbling mechanic. Within the <a href="../../sample_section/sample_games/">cluster sample game</a> for example, while there are still winning combinations, the board is tumbled, wins are evaluated for the new board, the wallet manager is updated and relevent events are emitted:</p>
+<p>Often (though not always) cluster pays games include a tumbling mechanic. Within the <a href="../../sample_section/sample_games/">cluster sample game</a> for example, while there are still winning combinations, the board is tumbled, wins are evaluated for the new board, the wallet manager is updated and relevant events are emitted:</p>
 <pre><code class="language-python">    while self.win_data[&quot;totalWin&quot;] &gt; 0 and not (self.wincap_triggered):
         self.tumble_game_board()
         self.win_data = self.get_cluster_data(record_wins=True)

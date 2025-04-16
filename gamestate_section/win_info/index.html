@@ -1311,71 +1311,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1496,13 +1431,13 @@
 </code></pre>
 <p>This position is calculated as the board position closest to the  centre-of-mass of winning clusters.</p>
 <h3 id="wallet-manager">Wallet manager</h3>
-<p>When writing game logic, the intent is to have a clear seperation of logic, events and wins for clarity. The wins are all handled through a <code>WalletManager</code> class, which will handle outcomes from single spins while also keeping track of total cumulative win amount for RTP calculations, as well as which gametype the wins arise from.</p>
+<p>When writing game logic, the intent is to have a clear separation of logic, events and wins for clarity. The wins are all handled through a <code>WalletManager</code> class, which will handle outcomes from single spins while also keeping track of total cumulative win amount for RTP calculations, as well as which gametype the wins arise from.</p>
 <p>This can be seen in a typical gamestate <code>run_spin()</code> function where wins are calculated, the wallet is updated and corresponding win events are emitted:</p>
 <pre><code class="language-python">self.win_data = self.get_lines()
 self.win_manager.update_spinwin(self.win_data[&quot;totalWin&quot;])
 self.emit_linewin_events()
 </code></pre>
-<p>Within a single spin there are wallet manager values associed with:</p>
+<p>Within a single spin there are wallet manager values associated with:</p>
 <ol>
 <li><code>spin_win</code> <ul>
 <li>This is the win associated with a specific <code>reveal</code> event. If the freegame is entered, this value is reset for each new spin. </li>
@@ -1510,7 +1445,7 @@ self.emit_linewin_events()
 </ul>
 </li>
 <li><code>running_bet_win</code><ul>
-<li>This is the cumulative win amount for a simulation. The final value which the <code>running_bet_win</code> is updated with should match the <code>payout_multiplier</code> for that simuation. </li>
+<li>This is the cumulative win amount for a simulation. The final value which the <code>running_bet_win</code> is updated with should match the <code>payout_multiplier</code> for that simulation. </li>
 <li>This value is automatically updated with the <code>wallet_manager.set_spinwin(win_amount: float)</code> method.</li>
 </ul>
 </li>

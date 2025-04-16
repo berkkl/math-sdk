@@ -586,9 +586,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gametypes" class="md-nav__link">
+  <a href="#game-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Gametypes
+      Game-types
     </span>
   </a>
   
@@ -1331,71 +1331,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1423,9 +1358,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gametypes" class="md-nav__link">
+  <a href="#game-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Gametypes
+      Game-types
     </span>
   </a>
   
@@ -1495,7 +1430,7 @@
 <h1 id="game-configuration-files">Game Configuration Files</h1>
 <p>The GameState object requires certain parameters to be specified, and should be manually filled out for each new game. These elements are all defined in the <code>__init__</code> function. Full details of the expected inputs and data-types are given in the <a href="../../../source_section/config_info/">Source Files/Config</a> section. </p>
 <p>General aspects of the game setup which should be considered when creating a <code>game_config.py</code> are:</p>
-<h4 id="gametypes">Gametypes</h4>
+<h4 id="game-types">Game-types</h4>
 <p>Several parts of the engine such as win amount verification, special symbol triggers/attributes and win-levels require the engine to know if the current state of the game is in the <em>basegame</em> or <em>freegame</em>. For example it is common to perform a weighted draw of some value:
  <code>python
  #Within game config:
@@ -1507,7 +1442,7 @@
  multiplier = get_random_outcome(self.config.multiplier_values[self.gametype])</code>
 Typically special rules apply when the player enters a freegame. The configuration file allows the user to specify the key corresponding to each gametype. By default this is set to <code>basegame</code> and <code>freegame</code> respectively. All simulations will start in the basegame mode unless otherwise specified, and the transition to the freegame state is handled in the default <code>reset_fs_spin()</code> function, which is called as soon as the <code>run_freespin()</code> function is entered. </p>
 <h4 id="reels">Reels</h4>
-<p>Most games will use distinct reelstrips for different gametypes. It is commonplace for game-modes to have multiple possible reels per mode. One method of adjusting the overall RTP of a game is to have a multiple reelstrips with varying RTP, which can be selected from a weighted draw when calling <code>self.create_board_from_reelstrips()</code>. Reelstrips are stored as a dictionary in the <code>self.config.reels</code> object. The reelstrip key and csv file name should be specified:</p>
+<p>Most games will use distinct reelstrips for different game-types. It is commonplace for game-modes to have multiple possible reels per mode. One method of adjusting the overall RTP of a game is to have a multiple reelstrips with varying RTP, which can be selected from a weighted draw when calling <code>self.create_board_from_reelstrips()</code>. Reelstrips are stored as a dictionary in the <code>self.config.reels</code> object. The reelstrip key and csv file name should be specified:</p>
 <pre><code class="language-python">        reels = {&quot;BR0&quot;: &quot;BR0.csv&quot;, &quot;FR0&quot;: &quot;FR0.csv&quot;}
         self.reels = {}
         for r, f in reels.items():
@@ -1541,7 +1476,7 @@ Typically special rules apply when the player enters a freegame. The configurati
     }
 </code></pre>
 <h4 id="special-symbols">Special symbols</h4>
-<p>Special symbol attributes are assigned based on names appearing in <code>self.special_symbols = {attribute[str]: [name[str], ...]}</code>. Multiple symbols can share attributes and multiple attributes can be applied to the same symbol. Most games will at least have a <code>wild</code> and <code>scatter</code> attribute. Once the symbol is initialised, the value of the attribute is accessed through <code>symbol.attribute</code> or symbol.get_attribute(attribute) <a href="" title="gamestate_section/syms_board_section/symbol_info.md">see Symbols for more information</a> regarding symbol object structures. By default the attribute is set to <code>True</code>, unless otherwise overridden using the <code>gamestate.special_symbol_functions</code>, defined in the gamestate override.</p>
+<p>Special symbol attributes are assigned based on names appearing in <code>self.special_symbols = {attribute[str]: [name[str], ...]}</code>. Multiple symbols can share attributes and multiple attributes can be applied to the same symbol. Most games will at least have a <code>wild</code> and <code>scatter</code> attribute. Once the symbol is initialized, the value of the attribute is accessed through <code>symbol.attribute</code> or symbol.get_attribute(attribute) <a href="" title="gamestate_section/syms_board_section/symbol_info.md">see Symbols for more information</a> regarding symbol object structures. By default the attribute is set to <code>True</code>, unless otherwise overridden using the <code>gamestate.special_symbol_functions</code>, defined in the gamestate override.</p>
 
 
 

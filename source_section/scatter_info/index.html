@@ -1246,71 +1246,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Frontend Framework
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Frontend Framework
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../fe_assets/fe_readme/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    FE SDK
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1354,7 +1289,7 @@
 
 </code></pre>
 <p>Ranges defined in <code>min_combination</code> and <code>max_combination</code> are inclusive, so for example if the <code>8-kind</code> payout for symbol <code>H1</code> pays <code>10x</code>, this would be written as: <code>((8,8),H1): 10</code>.</p>
-<p>Often (though not always) Scatter pays games are also cascading/tumbling. Within the <a href="../../sample_section/sample_games/">scatter sample game</a> for example, while there are still winning combinations, the board is tumbled, wins are evaluated for the new board, the wallet manager is updated and relevent events are emitted:</p>
+<p>Often (though not always) Scatter pays games are also cascading/tumbling. Within the <a href="../../sample_section/sample_games/">scatter sample game</a> for example, while there are still winning combinations, the board is tumbled, wins are evaluated for the new board, the wallet manager is updated and relevant events are emitted:</p>
 <pre><code class="language-python">    while self.win_data[&quot;totalWin&quot;] &gt; 0 and not (self.wincap_triggered):
         self.tumble_game_board()
         self.win_data = self.get_scatterpay_wins(record_wins=True)
