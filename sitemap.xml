@@ -2,130 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://carrot-engineering.github.io/math-sdk/directory/</loc>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/general_overview/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/home/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/events_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/force_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/repeat_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/win_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/configuration_section/betmode_dist/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/configuration_section/betmode_overview/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/configuration_section/config_overview/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/syms_board_section/board_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/gamestate_section/syms_board_section/symbol_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/optimization_section/optimization_algorithm/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/overview_section/game_format/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/overview_section/game_struct/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/overview_section/state_overview/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/sample_section/sample_games/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/board_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/cluster_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/config_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/event_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/executables_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/file_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/lines_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/scatter_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/state_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/tumble_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/ways_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/source_section/win_manager/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/tests_section/test_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/uploads_section/upload_info/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
     <url>
          <loc>https://carrot-engineering.github.io/math-sdk/utils_section/utilities/</loc>
-         <lastmod>2025-04-16</lastmod>
+         <lastmod>2025-04-24</lastmod>
     </url>
 </urlset>

@@ -17,12 +17,12 @@
         <link rel="next" href="../game_struct/">
       
       
-      <link rel="icon" href="../../assets/small_carrot.svg">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
-        <title>State Machine - Carrot Software Development Kit (SDK)</title>
+        <title>State Machine - Stake Dev Kit (Math-Engine)</title>
       
     
     
@@ -43,10 +43,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../styles/stake.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -65,7 +67,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-purple">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -90,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Carrot Software Development Kit (SDK)" class="md-header__button md-logo" aria-label="Carrot Software Development Kit (SDK)" data-md-component="logo">
+    <a href="../.." title="Stake Dev Kit (Math-Engine)" class="md-header__button md-logo" aria-label="Stake Dev Kit (Math-Engine)" data-md-component="logo">
       
-  <img src="../../assets/big_carrot.svg" alt="logo">
+  <img src="../../assets/stake_logo_white.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -103,7 +105,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Carrot Software Development Kit (SDK)
+            Stake Dev Kit (Math-Engine)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -122,9 +124,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
       </label>
     
@@ -132,9 +134,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
       </label>
     
@@ -210,12 +212,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Carrot Software Development Kit (SDK)" class="md-nav__button md-logo" aria-label="Carrot Software Development Kit (SDK)" data-md-component="logo">
+    <a href="../.." title="Stake Dev Kit (Math-Engine)" class="md-nav__button md-logo" aria-label="Stake Dev Kit (Math-Engine)" data-md-component="logo">
       
-  <img src="../../assets/big_carrot.svg" alt="logo">
+  <img src="../../assets/stake_logo_white.svg" alt="logo">
 
     </a>
-    Carrot Software Development Kit (SDK)
+    Stake Dev Kit (Math-Engine)
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -227,11 +229,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Carrot SDK
+    Home
     
   </span>
   
@@ -264,7 +266,7 @@
             
   
   <span class="md-ellipsis">
-    Math Framework
+    Technical Details
     
   </span>
   
@@ -275,7 +277,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Math Framework
+            Technical Details
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -286,11 +288,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../directory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Home
+    SDK Directory
     
   </span>
   
@@ -426,6 +428,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#key-responsibilities-of-gamestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Responsibilities of GameState
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Responsibilities of GameState">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#simulation-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Simulation Configuration
@@ -438,6 +450,20 @@
   <a href="#game-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Game Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-core-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending Core Functionality
     </span>
   </a>
   
@@ -524,6 +550,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resetting-the-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resetting the Book
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -535,6 +570,21 @@
       Lookup Tables
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Lookup Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-lookup-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Lookup Tables?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1380,7 +1430,7 @@
         
   
   <span class="md-ellipsis">
-    Tests [NA]
+    Tests
     
   </span>
   
@@ -1435,6 +1485,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#key-responsibilities-of-gamestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Responsibilities of GameState
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Responsibilities of GameState">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#simulation-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Simulation Configuration
@@ -1447,6 +1507,20 @@
   <a href="#game-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       Game Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extending-core-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extending Core Functionality
     </span>
   </a>
   
@@ -1533,6 +1607,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#resetting-the-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resetting the Book
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1544,6 +1627,21 @@
       Lookup Tables
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Lookup Tables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-lookup-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Lookup Tables?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1565,15 +1663,16 @@
 
 <h1 id="the-state-machine">The State Machine</h1>
 <h2 id="introduction">Introduction</h2>
-<p>When initializing a simulation batch, the <strong>GameState</strong> class serves as a central hub that manages all simulation aspects, including:</p>
+<p>The <strong>GameState</strong> class serves as the central hub for managing all aspects of a simulation batch. It handles:</p>
 <ul>
 <li>Simulation parameters</li>
-<li>All game modes</li>
+<li>Game modes</li>
 <li>Configuration settings</li>
 <li>Simulation results</li>
 <li>Output files</li>
 </ul>
-<p>This class acts as a super-class, ensuring shared components across all simulations. The entry point for all game simulations is the <code>run.py</code> file, which sets up parameters through the <a href="../../source_section/config_info/">Config</a> class and initializes a <a href="../../source_section/state_info/">GameState</a> object. The <strong>GameState</strong> handles crucial aspects such as:</p>
+<p>The entry point for all game simulations is the <code>run.py</code> file, which initializes parameters through the <a href="../../source_section/config_info/">Config</a> class and creates a <a href="../../source_section/state_info/">GameState</a> object. The <strong>GameState</strong> ensures consistency across simulations and provides a unified structure for managing game logic and outputs.</p>
+<h3 id="key-responsibilities-of-gamestate">Key Responsibilities of <code>GameState</code></h3>
 <h4 id="simulation-configuration">Simulation Configuration</h4>
 <ul>
 <li>Compression</li>
@@ -1584,37 +1683,35 @@
 </ul>
 <h4 id="game-configuration">Game Configuration</h4>
 <ul>
-<li>Betmode details (costs, name, etc..)</li>
+<li>Betmode details (costs, names, etc.)</li>
 <li>Paytable</li>
 <li>Symbols</li>
 <li>Reelsets</li>
 </ul>
-<p>These <strong>global <code>GameState</code> attributes</strong> remain consistent across all game modes, and simulations. When a simulation runs, <code>run_spin()</code> creates a sub-instance of the <strong>General GameState</strong>, allowing modifications to game data through the <code>self</code> object. The central idea is that the <strong>GameState</strong> represents the current state of the simulation. And components within this state are modified directly. This reduces the need to be passing objects back and forth between functions when writing game logic. </p>
-<p>At a high-level, the structure of the engine is shown: 
-<img alt="below" src="../../engine_flowchart.png" /></p>
-<p>There is a super-class containing essentially all core functionality. When setting up a custom game, these events will extend (or override) the core functionality as per Python's Method Resolution Order (MRO). This <code>GameState</code> class is then used to keep track of simulation details. Once complete, all relevant output files are generated sequentially for each BetMode. Finally these outputs can be used for optimization before being uploaded/published to the Admin Control Panel (ACP).</p>
+<p>These <strong>global <code>GameState</code> attributes</strong> remain consistent across all game modes and simulations. When a simulation runs, the <code>run_spin()</code> method creates a sub-instance of the <strong>GeneralGameState</strong>, allowing modifications to game data directly through the <code>self</code> object. This design reduces the need for passing objects between functions, streamlining game logic development.</p>
+<p>At a high level, the structure of the engine is shown below:<br />
+<img alt="Engine Flowchart" src="../../engine_flowchart.png" /></p>
+<h3 id="extending-core-functionality">Extending Core Functionality</h3>
+<p>The <code>GameState</code> class acts as a super-class containing core functionality. Custom games can extend or override this functionality using Python's Method Resolution Order (MRO). Once simulations are complete, the relevant output files are generated sequentially for each BetMode. These outputs can then be optimized and uploaded to the Admin Control Panel (ACP).</p>
+<hr />
 <h2 id="class-inheritance">Class Inheritance</h2>
 <h3 id="why-use-class-inheritance">Why Use Class Inheritance?</h3>
-<p>Class inheritance ensures flexibility, allowing developers to access core functions while customizing specific behaviors for each game. Core functions are found in the <a href="../../source_section/win_manager/">Source Files</a> section and can be overridden at the game level.</p>
+<p>Class inheritance ensures flexibility, allowing developers to access core functions while customizing specific behaviors for each game. Core functions are defined in the <a href="../../source_section/win_manager/">Source Files</a> and can be overridden at the game level.</p>
 <h4 id="gamestateoverride-gamegame_overridepy"><strong>GameStateOverride (game/game_override.py)</strong></h4>
-<p>This class is the first in the <strong>Method Resolution Order (MRO)</strong> and is responsible for modifying or extending actions from the <code>state.py</code> file. All sample games override the <code>reset_book()</code> function to accommodate game-specific parameters.</p>
-<p>Example:</p>
+<p>This class is the first in the <strong>Method Resolution Order (MRO)</strong> and is responsible for modifying or extending actions from the <code>state.py</code> file. For example, all sample games override the <code>reset_book()</code> function to accommodate game-specific parameters:</p>
 <pre><code class="language-python">def reset_book(self):
     super().reset_book()
     self.reset_grid_mults()
     self.reset_grid_bool()
     self.tumble_win = 0
 </code></pre>
-<p>Each game has unique rules, such as cluster multipliers or cascading wins, which are set here.</p>
 <h4 id="gameexecutables-gamegame_executablespy"><strong>GameExecutables (game/game_executables.py)</strong></h4>
-<p>Executable functions group multiple game actions together. These functions can be overridden to introduce new mechanics at the game level.</p>
-<p>In the case of triggering freespins, for example. Generally the number of scatters active on a game-board would be counted and the appropriate number of spins are assigned from the config file definition:</p>
-<pre><code class="language-python">config.freespin_triggers = {3:8 ,4:10, 5:12}
-</code></pre>
-<p>Where 3 scatters award 8 spins etc... This is a commonly carried out procedure, so there is a function in <code>Executables.update_freespin_amount()</code> to assign freespins,</p>
-<pre><code class="language-python">    def update_freespin_amount(self, scatter_key: str = &quot;scatter&quot;) -&gt; None:
-        self.tot_fs = self.config.freespin_triggers[self.gametype][self.count_special_symbols(scatter_key)]
-        fs_trigger_event(self, basegame_trigger=True, freegame_trigger=False)
+<p>This class groups commonly used game actions into executable functions. These functions can be overridden to introduce new mechanics at the game level. For example, triggering freespins based on scatter symbols:</p>
+<pre><code class="language-python">config.freespin_triggers = {3: 8, 4: 10, 5: 12}
+
+def update_freespin_amount(self, scatter_key: str = &quot;scatter&quot;) -&gt; None:
+    self.tot_fs = self.config.freespin_triggers[self.gametype][self.count_special_symbols(scatter_key)]
+    fs_trigger_event(self, basegame_trigger=True, freegame_trigger=False)
 </code></pre>
 <p>However in the <code>0_0_scatter</code> sample game, we would instead want to assign the total spins to be 2x the number of active Scatters. Therefore we can override the function in the <code>GameExecutables</code> class:</p>
 <pre><code class="language-python">def update_freespin_amount(self, scatter_key: str = &quot;scatter&quot;):
@@ -1629,7 +1726,7 @@
 - The payout multiplier
 - Events triggered during the round
 - Win conditions</p>
-<p>Each simulation generates a <strong>Book</strong> object, which is stored in a <strong>library</strong> and subsequently attached to the global <strong>GameState</strong> object. The contents of <em>book.events</em> is the data returned from the RGS <em>play/</em> API.</p>
+<p>Each simulation generates a Book object, which is stored in a library. The library is a collection of all books generated during a simulation batch. These books are attached to the global GameState object and are used for further analysis and optimization.</p>
 <p>Example JSON structure:</p>
 <pre><code class="language-json">[
     {
@@ -1642,7 +1739,8 @@
     }
 ]
 </code></pre>
-<p>At the start of a simulation, the book is reset:</p>
+<h3 id="resetting-the-book">Resetting the Book</h3>
+<p>At the start of a simulation, the book is reset to ensure a clean state:</p>
 <pre><code class="language-python">def reset_book(self) -&gt; None:
     self.book = {
         &quot;id&quot;: self.sim + 1,
@@ -1651,9 +1749,9 @@
         &quot;criteria&quot;: self.criteria,
     }
 </code></pre>
-<p>At the end of a round, if all win criteria are satisfied, the book is added to the <strong>library</strong>. For more details, see <a href="../../gamestate_section/configuration_section/betmode_overview/">BetMode</a>.</p>
 <h2 id="lookup-tables">Lookup Tables</h2>
-<p>The <strong>payoutMultipler</strong> attached to a <strong>book</strong> represents the final amount paid to the player, inclusive or <em>basegame</em> and <em>freegame</em> wins. The <strong>LookUpTable</strong> <em>csv</em> file is a summary of all simulation payouts. This provides a convenient way to calculate win distribution properties and Return To Player calculations. All lookup tables will be of the format:</p>
+<h3 id="what-are-lookup-tables">What are Lookup Tables?</h3>
+<p>Lookup tables provide a summary of all simulation payouts, offering a convenient way to calculate win distribution properties and Return To Player (RTP) values. Each table is stored as a CSV file and contains the following columns:</p>
 <table>
 <thead>
 <tr>
@@ -1680,7 +1778,19 @@
 </tr>
 </tbody>
 </table>
-<p>All files generated from the Math Engine will have the prefix <code>lookUpTable_mode.csv</code>. This is the file consumed by the optimization algorithm, which has the effect of modifying the weight values, which are initially set to <code>1</code>. Optimized lookup tables will have the prefix <code>lookUpTable_mode_0.csv</code></p>
+<p>The <strong>payoutMultipler</strong> attached to a <strong>book</strong> represents the final amount paid to the player, inclusive or <em>basegame</em> and <em>freegame</em> wins. The <strong>LookUpTable</strong> <em>csv</em> file is a summary of all simulation payouts. This provides a convenient way to calculate win distribution properties and Return To Player calculations. All lookup tables will be of the format:</p>
+<p>Purpose of Lookup Tables</p>
+<ul>
+<li>Win Distribution Analysis: Analyze payout distributions across simulations.</li>
+<li>RTP Calculation: Calculate the overall RTP for a game mode.</li>
+<li>Optimization: Serve as input for the optimization algorithm, which adjusts simulation weights to achieve desired payout characteristics.</li>
+</ul>
+<p>File Naming Convention</p>
+<ul>
+<li>Initial Lookup Tables: lookUpTable_mode.csv</li>
+<li>Optimized Lookup Tables: lookUpTable_mode_0.csv</li>
+</ul>
+<p>The optimization algorithm modifies the weight values in the lookup table, which are initially set to 1. These optimized tables are then used for further analysis or deployment.</p>
 
 
 
@@ -1700,6 +1810,12 @@
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -1727,7 +1843,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
