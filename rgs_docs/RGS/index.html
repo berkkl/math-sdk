@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://carrot-engineering.github.io/math-sdk/math_docs/source_section/tumble_info/">
+        <link rel="canonical" href="https://carrot-engineering.github.io/math-sdk/rgs_docs/RGS/">
       
       
-        <link rel="prev" href="../board_info/">
+        <link rel="prev" href="../../fe_docs/ui/">
       
       
-        <link rel="next" href="../lines_info/">
       
-      
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Tumble - Stake Development Kits</title>
+        <title>RGS Technical Details - Stake Development Kits</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../styles/stake.css">
+      <link rel="stylesheet" href="../../styles/stake.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumbling-boards" class="md-skip">
+        <a href="#rgs-endpoints" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Stake Development Kits" class="md-header__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
+    <a href="../.." title="Stake Development Kits" class="md-header__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
       
-  <img src="../../../assets/logo_stake_eng_white.png" alt="logo">
+  <img src="../../assets/logo_stake_eng_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tumble
+              RGS Technical Details
             
           </span>
         </div>
@@ -215,9 +213,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Stake Development Kits" class="md-nav__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
+    <a href="../.." title="Stake Development Kits" class="md-nav__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
       
-  <img src="../../../assets/logo_stake_eng_white.png" alt="logo">
+  <img src="../../assets/logo_stake_eng_white.png" alt="logo">
 
     </a>
     Stake Development Kits
@@ -232,7 +230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -254,7 +252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_home/" class="md-nav__link">
+      <a href="../../fe_home/" class="md-nav__link">
         
   
   
@@ -276,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../math_home/" class="md-nav__link">
+      <a href="../../math_home/" class="md-nav__link">
         
   
   
@@ -335,20 +333,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -364,7 +360,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Math SDK Technical Details
@@ -378,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../directory/" class="md-nav__link">
+      <a href="../../math_docs/directory/" class="md-nav__link">
         
   
   
@@ -401,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../general_overview/" class="md-nav__link">
+      <a href="../../math_docs/general_overview/" class="md-nav__link">
         
   
   
@@ -462,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview_section/state_overview/" class="md-nav__link">
+      <a href="../../math_docs/overview_section/state_overview/" class="md-nav__link">
         
   
   
@@ -485,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview_section/game_struct/" class="md-nav__link">
+      <a href="../../math_docs/overview_section/game_struct/" class="md-nav__link">
         
   
   
@@ -508,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview_section/game_format/" class="md-nav__link">
+      <a href="../../math_docs/overview_section/game_format/" class="md-nav__link">
         
   
   
@@ -577,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/repeat_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/repeat_info/" class="md-nav__link">
         
   
   
@@ -638,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/configuration_section/config_overview/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/configuration_section/config_overview/" class="md-nav__link">
         
   
   
@@ -661,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/configuration_section/betmode_overview/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/configuration_section/betmode_overview/" class="md-nav__link">
         
   
   
@@ -684,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/configuration_section/betmode_dist/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/configuration_section/betmode_dist/" class="md-nav__link">
         
   
   
@@ -753,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/syms_board_section/symbol_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/syms_board_section/symbol_info/" class="md-nav__link">
         
   
   
@@ -776,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/syms_board_section/board_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/syms_board_section/board_info/" class="md-nav__link">
         
   
   
@@ -807,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/win_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/win_info/" class="md-nav__link">
         
   
   
@@ -830,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/events_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/events_info/" class="md-nav__link">
         
   
   
@@ -853,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gamestate_section/force_info/" class="md-nav__link">
+      <a href="../../math_docs/gamestate_section/force_info/" class="md-nav__link">
         
   
   
@@ -881,20 +877,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5" >
         
           
           <label class="md-nav__link" for="__nav_4_1_5" id="__nav_4_1_5_label" tabindex="0">
@@ -910,7 +904,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1_5">
             <span class="md-nav__icon md-icon"></span>
             Source Files
@@ -921,20 +915,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_5_1" >
         
           
           <label class="md-nav__link" for="__nav_4_1_5_1" id="__nav_4_1_5_1_label" tabindex="0">
@@ -950,7 +942,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_4_1_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1_5_1">
             <span class="md-nav__icon md-icon"></span>
             Calculations
@@ -964,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../board_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/board_info/" class="md-nav__link">
         
   
   
@@ -984,30 +976,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Tumble
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../math_docs/source_section/tumble_info/" class="md-nav__link">
         
   
   
@@ -1018,33 +990,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumbling-boards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tumbling boards
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1057,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lines_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/lines_info/" class="md-nav__link">
         
   
   
@@ -1080,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ways_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/ways_info/" class="md-nav__link">
         
   
   
@@ -1103,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scatter_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/scatter_info/" class="md-nav__link">
         
   
   
@@ -1126,7 +1071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cluster_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/cluster_info/" class="md-nav__link">
         
   
   
@@ -1157,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../config_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/config_info/" class="md-nav__link">
         
   
   
@@ -1180,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../event_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/event_info/" class="md-nav__link">
         
   
   
@@ -1203,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../executables_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/executables_info/" class="md-nav__link">
         
   
   
@@ -1226,7 +1171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../state_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/state_info/" class="md-nav__link">
         
   
   
@@ -1249,7 +1194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../win_manager/" class="md-nav__link">
+      <a href="../../math_docs/source_section/win_manager/" class="md-nav__link">
         
   
   
@@ -1272,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../file_info/" class="md-nav__link">
+      <a href="../../math_docs/source_section/file_info/" class="md-nav__link">
         
   
   
@@ -1303,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../utils_section/utilities/" class="md-nav__link">
+      <a href="../../math_docs/utils_section/utilities/" class="md-nav__link">
         
   
   
@@ -1326,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sample_section/sample_games/" class="md-nav__link">
+      <a href="../../math_docs/sample_section/sample_games/" class="md-nav__link">
         
   
   
@@ -1349,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../uploads_section/upload_info/" class="md-nav__link">
+      <a href="../../math_docs/uploads_section/upload_info/" class="md-nav__link">
         
   
   
@@ -1372,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../optimization_section/optimization_algorithm/" class="md-nav__link">
+      <a href="../../math_docs/optimization_section/optimization_algorithm/" class="md-nav__link">
         
   
   
@@ -1441,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/dependencies/" class="md-nav__link">
+      <a href="../../fe_docs/dependencies/" class="md-nav__link">
         
   
   
@@ -1464,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/get_started/" class="md-nav__link">
+      <a href="../../fe_docs/get_started/" class="md-nav__link">
         
   
   
@@ -1487,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/explore_sb/" class="md-nav__link">
+      <a href="../../fe_docs/explore_sb/" class="md-nav__link">
         
   
   
@@ -1510,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/flowchart/" class="md-nav__link">
+      <a href="../../fe_docs/flowchart/" class="md-nav__link">
         
   
   
@@ -1533,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/task_bd/" class="md-nav__link">
+      <a href="../../fe_docs/task_bd/" class="md-nav__link">
         
   
   
@@ -1556,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/steps/" class="md-nav__link">
+      <a href="../../fe_docs/steps/" class="md-nav__link">
         
   
   
@@ -1579,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/file_struct/" class="md-nav__link">
+      <a href="../../fe_docs/file_struct/" class="md-nav__link">
         
   
   
@@ -1602,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/context/" class="md-nav__link">
+      <a href="../../fe_docs/context/" class="md-nav__link">
         
   
   
@@ -1625,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fe_docs/ui/" class="md-nav__link">
+      <a href="../../fe_docs/ui/" class="md-nav__link">
         
   
   
@@ -1653,10 +1598,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../rgs_docs/RGS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1667,6 +1621,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1696,23 +1651,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumbling-boards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tumbling boards
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1728,11 +1668,317 @@
 
 
 
-  <h1>Tumble</h1>
-
-<h2 id="tumbling-boards">Tumbling boards</h2>
-<p>The <code>Tumble</code> class inherits <code>Board</code> and handles removing winning symbols from <code>self.board</code> and filling vacant positions with symbols which appear directly above winning positions using the properties <code>reel_positions</code> and <code>reelstrip_id</code>. Examples of applications surrounding tumbling (cascading) events can be found in the <code>0_0_cluster</code> and <code>0_0_scatter</code> sample games. </p>
-<p>The win evaluation functions for the cluster and scatter win-types assign the property <code>explode = True</code> to winning symbol objects. A new board is select by scanning the current <code>self.board</code> object reel-by-reel and counting the number of symbols which satisfy <code>sym.check_attribute("explode")</code>. This same number of symbols is then appended, counting backwards from the initial <code>self.reel_positions</code> values. If padding symbols are used, the symbol stored in <code>top_symbols</code> will be used to fill the first vacated position. </p>
+<h1 id="rgs-endpoints">RGS Endpoints</h1>
+<p>This specification outlines the API endpoints available to providers for communicating with the Stake Engine. These APIs enable key operations such as creating bets, completing bets, validating sessions, and retrieving player balances.</p>
+<h1 id="introduction">Introduction</h1>
+<p>This document defines how the provider’s frontend communicates with the Stake Engine endpoints. It includes a detailed description of the core API functionality, along with the corresponding request and response structures.</p>
+<h1 id="url-structure">URL Structure</h1>
+<p>Games are hosted under a predefined URL. Providers should use the parameters below to interact with the RGS on behalf of the user and correctly display game information.</p>
+<pre><code>https://games.stake-engine.com/{{.TeamID}}/{{.GameID}}/{{.GameVersion}}/index.html?sessionID={{.SessionID}}&amp;gameID={{.GameID}}&amp;lang={{.Lang}}&amp;device={{.Device}}&amp;rgs_url={{.RgsUrl}}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sessionID</td>
+<td>Unique session ID for the player. Required for all requests made by the game.</td>
+</tr>
+<tr>
+<td>gameID</td>
+<td>The game’s identifier within the Stake Engine. Used in many API calls.</td>
+</tr>
+<tr>
+<td>lang</td>
+<td>Language in which the game will be displayed.</td>
+</tr>
+<tr>
+<td>device</td>
+<td>Specifies 'mobile' or 'desktop'.</td>
+</tr>
+<tr>
+<td>rgs_url</td>
+<td>The URL used for authentication, placing bets, and completing rounds. This URL should not be hardcoded, as it may change dynamically.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="language">Language</h2>
+<p>The <code>lang</code> parameter should be an <a href="https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes">ISO 639-1</a> language code.</p>
+<p>Supported languages:</p>
+<ul>
+<li><code>ar</code> (Arabic)</li>
+<li><code>de</code> (German)</li>
+<li><code>en</code> (English)</li>
+<li><code>es</code> (Spanish)</li>
+<li><code>fi</code> (Finnish)</li>
+<li><code>fr</code> (French)</li>
+<li><code>hi</code> (Hindi)</li>
+<li><code>id</code> (Indonesian)</li>
+<li><code>ja</code> (Japanese)</li>
+<li><code>ko</code> (Korean)</li>
+<li><code>pl</code> (Polish)</li>
+<li><code>pt</code> (Portuguese)</li>
+<li><code>ru</code> (Russian)</li>
+<li><code>tr</code> (Turkish)</li>
+<li><code>vi</code> (Vietnamese)</li>
+<li><code>zh</code> (Chinese)</li>
+</ul>
+<h1 id="understanding-money">Understanding Money</h1>
+<p>Monetary values in the Stake Engine are integers with <strong>six decimal places</strong> of precision:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Actual Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100,000</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>1,000,000</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10,000,000</td>
+<td>10</td>
+</tr>
+<tr>
+<td>100,000,000</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>For example, to place a $1 bet, pass <code>"1000000"</code> as the amount.</p>
+<p>Currency impacts <strong>only</strong> the display layer; it does not affect gameplay logic.</p>
+<h2 id="supported-currencies">Supported Currencies</h2>
+<ul>
+<li>USD (United States Dollar)</li>
+<li>CAD (Canadian Dollar)</li>
+<li>JPY (Japanese Yen)</li>
+<li>EUR (Euro)</li>
+<li>RUB (Russian Ruble)</li>
+<li>CNY (Chinese Yuan)</li>
+<li>PHP (Philippine Peso)</li>
+<li>INR (Indian Rupee)</li>
+<li>IDR (Indonesian Rupiah)</li>
+<li>KRW (South Korean Won)</li>
+<li>BRL (Brazilian Real)</li>
+<li>MXN (Mexican Peso)</li>
+<li>DKK (Danish Krone)</li>
+<li>PLN (Polish Złoty)</li>
+<li>VND (Vietnamese Đồng)</li>
+<li>TRY (Turkish Lira)</li>
+<li>CLP (Chilean Peso)</li>
+<li>ARS (Argentine Peso)</li>
+<li>PEN (Peruvian Sol)</li>
+</ul>
+<h3 id="social-casino-currencies">Social Casino Currencies</h3>
+<ul>
+<li>XGC (Gold)</li>
+<li>XSC (Stake Cash)</li>
+</ul>
+<h1 id="bet-levels">Bet Levels</h1>
+<p>Although bet levels are not mandatory, bets must satisfy these conditions:</p>
+<ol>
+<li>The bet must fall between <code>minBet</code> and <code>maxBet</code> (returned from <code>/wallet/authenticate</code>).</li>
+<li>The bet must be divisible by <code>stepBet</code>.</li>
+</ol>
+<p>It is recommended to use the predefined <code>betLevels</code> to guide players.</p>
+<p>Example:</p>
+<pre><code class="language-json">{
+  &quot;minBet&quot;: 100000,
+  &quot;maxBet&quot;: 1000000000,
+  &quot;stepBet&quot;: 10000,
+  &quot;betLevels&quot;: [
+    100000, // $0.10
+    200000,
+    400000,
+    600000,
+    ...
+    1000000000 // $1000
+  ]
+}
+</code></pre>
+<h1 id="bet-modes-cost-multipliers">Bet Modes / Cost Multipliers</h1>
+<p>Games may have multiple bet modes defined in the game configuration. Refer to the <a href="https://carrot-engineering.github.io/math-sdk/math_docs/gamestate_section/configuration_section/betmode_overview/">Math SDK Documentation</a>.</p>
+<p>When making a play request:</p>
+<pre><code>Player debit amount = Base bet amount × Bet mode cost multiplier
+</code></pre>
+<h1 id="wallet">Wallet</h1>
+<p>The wallet endpoints enable interactions between the RGS and the Operator's Wallet API, managing the player's session and balance operations.</p>
+<h2 id="authenticate-request">Authenticate Request</h2>
+<p>Validates a <code>sessionID</code> with the operator. This must be called before using other wallet endpoints. Otherwise, they will throw <code>ERR_IS</code> (invalid session).</p>
+<h3 id="round">Round</h3>
+<p>The <code>round</code> returned may represent a currently active or the last completed round. Frontends should continue the round if it remains active.</p>
+<h3 id="request">Request</h3>
+<pre><code class="language-http">POST /wallet/authenticate
+</code></pre>
+<pre><code class="language-json">{
+  &quot;sessionID&quot;: &quot;xxxxxxx&quot;,
+  &quot;gameID&quot;: &quot;xxxxxxx&quot;
+}
+</code></pre>
+<h3 id="response">Response</h3>
+<pre><code class="language-json">{
+  &quot;balance&quot;: {
+    &quot;amount&quot;: 100000,
+    &quot;currency&quot;: &quot;USD&quot;
+  },
+  &quot;config&quot;: {
+    &quot;gameID&quot;: &quot;game_xxx&quot;,
+    &quot;minBet&quot;: 100000,
+    &quot;maxBet&quot;: 1000000000,
+    &quot;stepBet&quot;: 100000,
+    &quot;defaultBetLevel&quot;: 1000000,
+    &quot;betLevels&quot;: [...],
+    &quot;betModes&quot;: {
+      &quot;BASE&quot;: { &quot;costMultiplier&quot;: 1, &quot;feature&quot;: true, &quot;mode&quot;: &quot;BASE&quot; },
+      &quot;ANTE&quot;: { &quot;costMultiplier&quot;: 1.25, &quot;feature&quot;: true, &quot;mode&quot;: &quot;ANTE&quot; }
+    },
+    &quot;jurisdiction&quot;: {
+      &quot;socialCasino&quot;: false,
+      &quot;disabledFullscreen&quot;: false,
+      &quot;disabledTurbo&quot;: false,
+      ...
+    }
+  },
+  &quot;round&quot;: { ... }
+}
+</code></pre>
+<h2 id="balance-request">Balance Request</h2>
+<p>Retrieves the player’s current balance. Useful for periodic balance updates.</p>
+<h3 id="request_1">Request</h3>
+<pre><code class="language-http">POST /wallet/balance
+</code></pre>
+<pre><code class="language-json">{
+  &quot;sessionID&quot;: &quot;xxxxxx&quot;
+}
+</code></pre>
+<h3 id="response_1">Response</h3>
+<pre><code class="language-json">{
+  &quot;balance&quot;: {
+    &quot;amount&quot;: 100000,
+    &quot;currency&quot;: &quot;USD&quot;
+  }
+}
+</code></pre>
+<h2 id="play-request">Play Request</h2>
+<p>Initiates a game round and debits the bet amount from the player's balance.</p>
+<h3 id="request_2">Request</h3>
+<pre><code class="language-json">{
+  &quot;amount&quot;: 100000,
+  &quot;gameID&quot;: &quot;xxxxxx&quot;,
+  &quot;sessionID&quot;: &quot;xxxxxxx&quot;,
+  &quot;mode&quot;: &quot;BASE&quot;
+}
+</code></pre>
+<h3 id="response_2">Response</h3>
+<pre><code class="language-json">{
+  &quot;balance&quot;: {
+    &quot;amount&quot;: 100000,
+    &quot;currency&quot;: &quot;USD&quot;
+  },
+  &quot;round&quot;: { ... }
+}
+</code></pre>
+<h2 id="end-round-request">End Round Request</h2>
+<p>Completes a round, triggering a payout and ending all activity for that round.</p>
+<h3 id="request_3">Request</h3>
+<pre><code class="language-http">POST /wallet/endround
+</code></pre>
+<pre><code class="language-json">{
+  &quot;sessionID&quot;: &quot;xxxxxx&quot;,
+  &quot;gameID&quot;: &quot;xxxxxx&quot;
+}
+</code></pre>
+<h3 id="response_3">Response</h3>
+<pre><code class="language-json">{
+  &quot;balance&quot;: {
+    &quot;amount&quot;: 100000,
+    &quot;currency&quot;: &quot;USD&quot;
+  }
+}
+</code></pre>
+<h1 id="game-play">Game Play</h1>
+<h2 id="event">Event</h2>
+<p>Tracks in-progress player actions during a round. Useful for resuming gameplay if a player disconnects.</p>
+<h3 id="request_4">Request</h3>
+<pre><code class="language-http">POST /bet/event
+</code></pre>
+<pre><code class="language-json">{
+  &quot;sessionID&quot;: &quot;xxxxxx&quot;,
+  &quot;gameID&quot;: &quot;xxxxxx&quot;,
+  &quot;event&quot;: &quot;xxxxxx&quot;
+}
+</code></pre>
+<h3 id="response_4">Response</h3>
+<pre><code class="language-json">{
+  &quot;event&quot;: &quot;xxxxxx&quot;
+}
+</code></pre>
+<h1 id="response-codes">Response Codes</h1>
+<p>Stake Engine uses standard HTTP response codes (200, 400, 500) with specific error codes.</p>
+<h2 id="400-client-errors">400 – Client Errors</h2>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERR_VAL</td>
+<td>Invalid Request</td>
+</tr>
+<tr>
+<td>ERR_IPB</td>
+<td>Insufficient Player Balance</td>
+</tr>
+<tr>
+<td>ERR_IS</td>
+<td>Invalid Session Token / Session Timeout</td>
+</tr>
+<tr>
+<td>ERR_ATE</td>
+<td>Failed User Authentication / Token Expired</td>
+</tr>
+<tr>
+<td>ERR_GLE</td>
+<td>Gambling Limits Exceeded</td>
+</tr>
+<tr>
+<td>ERR_LOC</td>
+<td>Invalid Player Location</td>
+</tr>
+</tbody>
+</table>
+<h2 id="500-server-errors">500 – Server Errors</h2>
+<table>
+<thead>
+<tr>
+<th>Status Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERR_GEN</td>
+<td>General Server Error</td>
+</tr>
+<tr>
+<td>ERR_MAINTENANCE</td>
+<td>RGS Under Planned Maintenance</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1787,10 +2033,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.top", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

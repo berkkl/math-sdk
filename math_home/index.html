@@ -1687,6 +1687,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rgs_docs/RGS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RGS Technical Details
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1811,6 +1834,7 @@
 The game-logic files contain an ordered list of critical game details such as symbol names, board positions, payout amounts, winning symbol positions etc... Accompanying each simulation detailed in the game logic files is a CSV entry listing the simulation number, probability of selection, and payout amount. So upon a game round request, the RGS will consult the CSV/lookup table to select a simulation number, then return a JSON response from the game-logic file for this simulation number to the frontend, telling the web-client what to render, while also updating the players wallet with the payout amount. Breaking up these two files also allows us to exactly calculate the games RTP and essential win-distribution statistics at time of publication. </p>
 <h3 id="get-started-today"><strong>Get Started Today</strong></h3>
 <p>Dive into the technical details and explore how the Carrot Math SDK can transform your game development process. With powerful tools, sample games, and detailed documentation, you'll have everything you need to create engaging and mathematically sound games.</p>
+<p>See <a href="../math_docs/directory/">Math SDK Technical Details</a> for more details.</p>
 
 
 
