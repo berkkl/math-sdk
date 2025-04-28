@@ -237,7 +237,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -1335,29 +1335,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../math_docs/tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1691,29 +1668,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1814,7 +1768,8 @@
 <li><a href="#contextXstate">ContextXstate</a></li>
 <li><a href="#contextApp">ContextApp</a></li>
 </ul>
-<p><a href="https://svelte.dev/docs/svelte/context">svelte-context</a> is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game <code>/apps/lines</code>. As showed before, <code>setContext()</code> is called at entry level component. For example, <code>apps/lines/src/routes/+page.svelte</code> or <code>apps/lines/src/stories/ComponentsGame.stories.svelte</code>. It sets four major contexts from the packages by this:</p>
+<p><a name="contextEventEmitter"></a>
+<a href="https://svelte.dev/docs/svelte/context">svelte-context</a> is a useful feature from svelte especially when a shared state requires some inputs/types to create. Here it shows the structure of context of sample game <code>/apps/lines</code>. As showed before, <code>setContext()</code> is called at entry level component. For example, <code>apps/lines/src/routes/+page.svelte</code> or <code>apps/lines/src/stories/ComponentsGame.stories.svelte</code>. It sets four major contexts from the packages by this:</p>
 <pre><code>// context.ts - Example of setContext in apps
 
 export const setContext = () =&gt; {
@@ -1828,7 +1783,7 @@ export const setContext = () =&gt; {
 <p><img alt="below" src="../../fe_assets/context_diagram.png" /></p>
 <p><a name="contextEventEmitter"></a></p>
 <h2 id="contexteventemitter">ContextEventEmitter</h2>
-<p><code>eventEmitter</code> is created by <code>packages/utils-event-emitter/src/createEventEmitter.ts</code>. We have covered eventEmitter in the <a href="#eventEmitter">previous content</a>.</p>
+<p><code>eventEmitter</code> is created by <code>packages/utils-event-emitter/src/createEventEmitter.ts</code>. We have covered eventEmitter in the previous content.</p>
 <p><a name="contextLayout"></a></p>
 <h2 id="contextlayout">ContextLayout</h2>
 <p><code>stateLayout</code> and <code>stateLayoutDerived</code> are created by <code>packages/utils-layout/src/createLayout.svelte.ts</code>. It provides canvasSizes, canvasRatio, layoutType and so on. Because we have a setting <code>resizeTo: window</code> for PIXI.Application, we use the sizes of window from <a href="https://svelte.dev/docs/svelte/svelte-reactivity-window">svelte-reactivity</a> as <code>canvasSizes</code>.</p>

@@ -237,7 +237,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -1437,29 +1437,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1713,29 +1690,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../fe_docs/localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1863,37 +1817,37 @@
 Typically special rules apply when the player enters a freegame. The configuration file allows the user to specify the key corresponding to each gametype. By default this is set to <code>basegame</code> and <code>freegame</code> respectively. All simulations will start in the basegame mode unless otherwise specified, and the transition to the freegame state is handled in the default <code>reset_fs_spin()</code> function, which is called as soon as the <code>run_freespin()</code> function is entered. </p>
 <h4 id="reels">Reels</h4>
 <p>Most games will use distinct reelstrips for different game-types. It is commonplace for game-modes to have multiple possible reels per mode. One method of adjusting the overall RTP of a game is to have a multiple reelstrips with varying RTP, which can be selected from a weighted draw when calling <code>self.create_board_from_reelstrips()</code>. Reelstrips are stored as a dictionary in the <code>self.config.reels</code> object. The reelstrip key and csv file name should be specified:</p>
-<pre><code class="language-python">        reels = {&quot;BR0&quot;: &quot;BR0.csv&quot;, &quot;FR0&quot;: &quot;FR0.csv&quot;}
-        self.reels = {}
-        for r, f in reels.items():
-            self.reels[r] = self.read_reels_csv(str.join(&quot;/&quot;, [self.reels_path, f]))
+<pre><code class="language-python">reels = {&quot;BR0&quot;: &quot;BR0.csv&quot;, &quot;FR0&quot;: &quot;FR0.csv&quot;}
+self.reels = {}
+for r, f in reels.items():
+    self.reels[r] = self.read_reels_csv(str.join(&quot;/&quot;, [self.reels_path, f]))
 </code></pre>
 <p>Reelstrip weightings are required <a href="" title="gamestate_section/configuration_section/betmode_dist.md/">distribution conditions</a>. An example of using multiple reelstrips for each gametype can be applied as:</p>
-<pre><code class="language-python">    conditions={
-        &quot;reel_weights&quot;: {self.basegame_type: {&quot;BR0&quot;: 2, &quot;BR1&quot;: 1}, self.freegame_type: {&quot;FR0&quot;:5, &quot;FR1&quot;: 1}},
-    },
+<pre><code class="language-python">conditions={
+    &quot;reel_weights&quot;: {self.basegame_type: {&quot;BR0&quot;: 2, &quot;BR1&quot;: 1}, self.freegame_type: {&quot;FR0&quot;:5, &quot;FR1&quot;: 1}},
+},
 </code></pre>
 <h4 id="scatter-triggers-and-anticipation">Scatter triggers and Anticipation</h4>
 <p>Freegame entry from the basegame or retriggers in the freegame should be specified in the format <code>{num_scatters: num_spins}</code>,</p>
-<pre><code class="language-python">    self.freespin_triggers = {
-        self.basegame_type: {3: 10, 4: 15, 5: 20},
-        self.freegame_type: {2: 4, 3: 6, 4: 8, 5: 10},
-    }
+<pre><code class="language-python">self.freespin_triggers = {
+    self.basegame_type: {3: 10, 4: 15, 5: 20},
+    self.freegame_type: {2: 4, 3: 6, 4: 8, 5: 10},
+}
 </code></pre>
 <h4 id="symbol-initialization">Symbol initialization</h4>
 <p>A symbol is determined to be valid if the name exists either in <code>self.paytable</code> or in <code>self.special_symbols</code>. If a symbol that does not exist in either of these fields is detected when loading reelstrips, a <code>RuntimeError</code> is raised.</p>
 <h4 id="symbol-values">Symbol values</h4>
 <p>Winning symbols are determined from the <code>self.paytable</code> dictionary object in the game configuration. The expected format is:</p>
-<pre><code class="language-python">    self.paytable = {
-        (kind[int], name[str]): value[float],
-        ...
-    }
+<pre><code class="language-python">self.paytable = {
+    (kind[int], name[str]): value[float],
+    ...
+}
 </code></pre>
 <p>Where <code>kind</code> is the number of winning symbols. For cascading games, or other circumstances where multiple winning symbol numbers pay the same about, for example in the <a href="" title="sample_section/sample_games.md">scatter pays example game</a> where 13+ symbols pay the same amount, <code>self.pay_group</code> can be defined. By then calling <code>self.paytable = self.convert_range_table(pay_group)</code> a paytable of the expected format is generated. The format of the pay-group objects (inclusive of both values in the kind-range) is given as:</p>
-<pre><code class="language-python">    self.pay_group = {
-        ((min_kind[int],max_kind[int]), name[str]): value[float],
-        ...
-    }
+<pre><code class="language-python">self.pay_group = {
+    ((min_kind[int],max_kind[int]), name[str]): value[float],
+    ...
+}
 </code></pre>
 <h4 id="special-symbols">Special symbols</h4>
 <p>Special symbol attributes are assigned based on names appearing in <code>self.special_symbols = {attribute[str]: [name[str], ...]}</code>. Multiple symbols can share attributes and multiple attributes can be applied to the same symbol. Most games will at least have a <code>wild</code> and <code>scatter</code> attribute. Once the symbol is initialized, the value of the attribute is accessed through <code>symbol.attribute</code> or symbol.get_attribute(attribute) <a href="" title="gamestate_section/syms_board_section/symbol_info.md">see Symbols for more information</a> regarding symbol object structures. By default the attribute is set to <code>True</code>, unless otherwise overridden using the <code>gamestate.special_symbol_functions</code>, defined in the gamestate override.</p>

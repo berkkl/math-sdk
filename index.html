@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Stake Development Kit
             
           </span>
         </div>
@@ -244,7 +244,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -257,7 +257,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -309,6 +309,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stake-engine-game-format-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stake Engine Game Format Criteria
+    </span>
+  </a>
   
 </li>
       
@@ -1406,29 +1415,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="math_docs/tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1682,29 +1668,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="fe_docs/localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1779,6 +1742,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stake-engine-game-format-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stake Engine Game Format Criteria
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1798,17 +1770,20 @@
 <h1 id="stake-development-kit"><strong>Stake Development Kit</strong></h1>
 <h3 id="powered-by-carrotrgs">Powered by <strong><a href="https://carrotgaming.io/">CarrotRGS</a></strong></h3>
 <h2 id="complex-games-made-easy"><strong>Complex Games Made Easy</strong></h2>
-<p>The Stake-Engine-SDK is a comprehensive framework designed to simplify the creation, simulation, and optimization of slot games. Whether you're an independent developer or part of a dedicated studio, this SDK empowers you to bring your gaming vision to life with precision and efficiency. By leveraging the Carrot Remote Gaming Server (RGS), developers can seamlessly integrate their games on <a href="https://stake.com">Stake.com</a>, ensuring a smooth and scalable deployment process.</p>
+<p>The Stake Development Kit is a comprehensive framework designed to simplify the creation, simulation, and optimization of slot games. Whether you're an independent developer or part of a dedicated studio, the SDK empowers you to bring your gaming vision to life with precision and efficiency. By leveraging the Carrot Remote Gaming Server (RGS), developers can seamlessly integrate their games on <a href="https://stake.com">Stake.com</a>, facilitating smooth and scalable deployments.</p>
 <h3 id="what-does-the-sdk-offer"><strong>What Does the SDK Offer?</strong></h3>
-<p>The SDK is divided into two key components:</p>
+<p>The SDK is an optional software package handling both the client-side rendering of games in-browser, and the generation of static files containing all possible game results.</p>
 <ol>
 <li>
-<p><strong>Math Framework</strong>: A Python-based engine for defining game rules, simulating outcomes, and optimizing win distributions. It generates all necessary backend files, including configuration files, lookup tables, and simulation results.</p>
+<p><strong>Math Framework</strong>: A Python-based engine for defining game rules, simulating outcomes, and optimizing win distributions. It generates all necessary backend and configuration files, lookup tables, and simulation results.</p>
 </li>
 <li>
 <p><strong>Frontend Framework</strong>: A PixieJS/Svelte-based toolkit for creating visually engaging slot games. This component integrates seamlessly with the math engine's outputs, ensuring consistency between game logic and player experience.</p>
 </li>
 </ol>
+<h2 id="stake-engine-game-format-criteria"><strong>Stake Engine Game Format Criteria</strong></h2>
+<p>For verification, testing and security purposes, games uploaded to Stake Engine must consist of static files. Developers utilizing their own frontend and/or math solutions are welcome to upload compatible file-formats to the Admin Control Panel (ACP). All possible game-outcomes must be contained within compressed game-files, typically separated out by modes. Each outcome must be mapped to a corresponding CSV file summarizing a single game-round by a simulation number, probability of selection, and final payout multiplier. When a betting round is initiated a simulation number is selected at a frequency proportional to the simulation weighting, and the corresponding game events are returned though the <em>/play</em> API response.</p>
+<p><img alt="Below" src="math_docs/rgs-nbg-im.png" /></p>
 
 
 

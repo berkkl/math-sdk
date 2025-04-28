@@ -237,7 +237,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -1335,29 +1335,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../math_docs/tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1709,29 +1686,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1950,7 +1904,7 @@ export const bookEventHandlerMap: BookEventHandlerMap&lt;BookEvent, BookEventCon
 <h2 id="emitterevent">emitterEvent</h2>
 <p>An emitterEvent is a json data that <code>eventEmitter.broadcast(emitterEvent)</code> or <code>eventEmitter.broadcastAsync(emitterEvent)</code> broadcasts, so that a component which has <code>eventEmitter.subscribeOnMount(emitterEventHandlerMap)</code> can receive the data and deal with it in a synchronous or asynchronous way.</p>
 <p><mark>For a game we have many animations, so sometimes we need to "await" for those animations to finish before going to the next step.</mark></p>
-<p>Conceptually a bookEvent is composed by emitterEvents. <mark>Nevertheless, the flexibility lies in that the <a href="#taskBreakdownImg">emitterEvents composing a bookEvent can come from multiple different svelte components</a>.</mark> This way we can achieve and control the interactions and timing between different svelte components for the same bookEvent, ultimately, to achieve our games.</p>
+<p>Conceptually a bookEvent is composed by emitterEvents. <mark>Nevertheless, the flexibility lies in that the emitterEvents composing a bookEvent can come from multiple different svelte components.</mark> This way we can achieve and control the interactions and timing between different svelte components for the same bookEvent, ultimately, to achieve our games.</p>
 <pre><code>// bookEventHandlerMap.ts - Example of an emitterEvent
 
 {
@@ -2004,7 +1958,7 @@ context.eventEmitter.subscribeOnMount({
 </code></pre>
 <p><a name="emitterEventHandlerMap"></a></p>
 <h2 id="emittereventhandlermap">emitterEventHandlerMap</h2>
-<p>An object that the key is <code>emitterEvent.type</code> and value is an <code>emitterEventHandler</code>. We can find this object in each component. For example, <a href="/apps/lines/src/components/FreeSpinCounter.svelte">apps/lines/src/components/FreeSpinCounter.svelte</a>.</p>
+<p>An object that the key is <code>emitterEvent.type</code> and value is an <code>emitterEventHandler</code>. We can find this object in each component. For example, (<code>/apps/lines/src/components/FreeSpinCounter.svelte</code>).</p>
 <ul>
 <li><mark>Each emitterEventHandler can do a lot or a little, but we prefer each emitterEventHandler just doing a minimum job to achieve the duty that is described by its type. This way we follow the <a href="https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design#single-responsibility-principle">Single Responsibility Principle of SOLID</a>.</mark> For example, <code>freeSpinCounterShow</code> just shows this component and does nothing more.</li>
 </ul>

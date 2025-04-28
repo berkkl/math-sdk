@@ -237,7 +237,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -1335,29 +1335,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../math_docs/tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1673,29 +1650,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1789,8 +1743,7 @@
      |_components-*
      |_pixi-*
 </code></pre>
-<p><a name="apps"></a></p>
-<h2 id="apps"><a href="/apps">/apps</a></h2>
+<h2 id="apps">/apps</h2>
 <p>For each game, it has an individual folder in the apps, for example <code>/apps/lines</code>.</p>
 <ul>
 <li><code>/apps/lines/package.json</code>: Find the module name of the app here.</li>
@@ -1845,7 +1798,7 @@
 <li>We can render <code>&lt;Game \/&gt;</code>(<code>/apps/lines/src/components/Game.svelte</code>) component in the app or in the storybook. Either way it requires the context to set in advance, otherwise the children or the descendants will throw errors if they use the <code>getContext()</code>(<code>/apps/lines/src/game/context.ts#L21</code>) from <code>/apps</code> or <code>getContext()</code> (<code>/packages/components-ui-pixi/src/context.ts#L8</code>) from <code>/packages</code>.</li>
 </ul>
 <p><a name="packages"></a></p>
-<h2 id="packages"><a href="/packages">/packages</a></h2>
+<h2 id="packages">/packages</h2>
 <p>For every TurboRepo local package, you can import and use them in an app or in another local package directly without publishing them to <a href="https://www.npmjs.com">npm</a>. <mark>Our codebase benefits considerably from a monorepo because it brings reusability, readability, maintainability, code splitting and so on.</mark> Here is an example of importing local packages with <code>workspace:*</code> in <code>/apps/lines/package.json</code>:</p>
 <pre><code>// package.json
 

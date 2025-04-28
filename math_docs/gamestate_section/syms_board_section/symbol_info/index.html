@@ -237,7 +237,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Stake Development Kit
     
   </span>
   
@@ -1392,29 +1392,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../tests_section/test_info/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1668,29 +1645,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../fe_docs/localisation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Localization
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -1786,15 +1740,15 @@
 </ul>
 </li>
 </ul>
-<pre><code class="language-python">    def assign_special_sym_function(self):
-        self.special_symbol_functions = {
-            &quot;W&quot;: [self.assign_mult_property],
-        }
-    def assign_mult_property(self, symbol):
-        multiplier_value = get_random_outcome(
-            self.get_current_distribution_conditions()[&quot;mult_values&quot;][self.gametype]
-        )
-        symbol.assign_attribute({&quot;multiplier&quot;: multiplier_value})
+<pre><code class="language-python">def assign_special_sym_function(self):
+    self.special_symbol_functions = {
+        &quot;W&quot;: [self.assign_mult_property],
+    }
+def assign_mult_property(self, symbol):
+    multiplier_value = get_random_outcome(
+        self.get_current_distribution_conditions()[&quot;mult_values&quot;][self.gametype]
+    )
+    symbol.assign_attribute({&quot;multiplier&quot;: multiplier_value})
 </code></pre>
 <div class="language-text highlight"><pre><span></span><code>`assign_special_sym_function()` is called when the `GameState` is initially created. In this example, we are assigning a multiplier value to any new wild (&#39;W&#39;) which is created. Any action defined within `self.special_symbol_functions` with the format `{&lt;name&gt;: @callable_func}` will be assigned to the `special_functions` property.
 </code></pre></div>
@@ -1814,18 +1768,18 @@
 </ul>
 <h2 id="symbol-attributes">Symbol Attributes</h2>
 <p>In addition to the application of <code>special_functions</code>, attributes are an important characteristic of symbol objects, particularly for checking if there are any special symbols on the game-board which require additional actions. For example if we want to check if a given symbol has a <code>prize</code> or <code>multiplier</code> attribute:</p>
-<pre><code class="language-python">    if self.board[reel][row].check_attribute('prize','multiplier'):
-        ...
+<pre><code class="language-python">if self.board[reel][row].check_attribute('prize','multiplier'):
+    ...
 </code></pre>
 <p>The <code>check_attribute</code> function will return a <code>boolean</code> value if the given attribute exists and its value is not <code>False</code>. I.e.:</p>
-<pre><code class="language-python">    if symbol.check_attribute('prize'):
-        win += symbol.get_attribute('prize')
+<pre><code class="language-python">if symbol.check_attribute('prize'):
+    win += symbol.get_attribute('prize')
 </code></pre>
 <p>Furthermore we can assign properties to a symbol using the <code>assign_attribute</code> method. As an example, if we have a game where we have a special symbol denoted by the <code>enhance</code> tag. Where the effect of this symbol is to add a <code>multiplier</code> value to any active <code>Wild</code> symbols. In the <code>gamestate</code> we could preform the following actions:</p>
-<pre><code class="language-python">    if len(self.special_symbols_on_board['enhance']) &gt; 0:
-        for sym in self.special_symbols_on_board[wild]:
-            mult_val = get_random_outcomes(self.config.mult_values[self.gametype])
-            self.board[sym['reel']][sym['row']].assign_attribute({'multiplier', mult_val})
+<pre><code class="language-python">if len(self.special_symbols_on_board['enhance']) &gt; 0:
+    for sym in self.special_symbols_on_board[wild]:
+        mult_val = get_random_outcomes(self.config.mult_values[self.gametype])
+        self.board[sym['reel']][sym['row']].assign_attribute({'multiplier', mult_val})
 </code></pre>
 
 
