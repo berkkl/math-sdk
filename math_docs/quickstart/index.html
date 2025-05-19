@@ -8,22 +8,28 @@
       
       
       
+        <link rel="canonical" href="https://github.com/StakeEngine/math-sdk.git/math_docs/quickstart/">
       
       
+        <link rel="prev" href="../general_overview/">
       
-      <link rel="icon" href="/StakeEngine/math-sdk.git/assets/favicon.png">
+      
+        <link rel="next" href="../../rgs_docs/data_format/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Stake Development Kits</title>
+        <title>Quickstart Guide - Stake Development Kits</title>
       
     
     
-      <link rel="stylesheet" href="/StakeEngine/math-sdk.git/assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="/StakeEngine/math-sdk.git/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="/StakeEngine/math-sdk.git/styles/stake.css">
+      <link rel="stylesheet" href="../../styles/stake.css">
     
-    <script>__md_scope=new URL("/StakeEngine/math-sdk.git/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#running-your-first-game" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/StakeEngine/math-sdk.git/." title="Stake Development Kits" class="md-header__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
+    <a href="../.." title="Stake Development Kits" class="md-header__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
       
-  <img src="/StakeEngine/math-sdk.git/assets/logo_stake_eng_white.png" alt="logo">
+  <img src="../../assets/logo_stake_eng_white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -100,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Quickstart Guide
             
           </span>
         </div>
@@ -204,9 +215,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/StakeEngine/math-sdk.git/." title="Stake Development Kits" class="md-nav__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
+    <a href="../.." title="Stake Development Kits" class="md-nav__button md-logo" aria-label="Stake Development Kits" data-md-component="logo">
       
-  <img src="/StakeEngine/math-sdk.git/assets/logo_stake_eng_white.png" alt="logo">
+  <img src="../../assets/logo_stake_eng_white.png" alt="logo">
 
     </a>
     Stake Development Kits
@@ -221,7 +232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -243,7 +254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_home/" class="md-nav__link">
+      <a href="../../fe_home/" class="md-nav__link">
         
   
   
@@ -265,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_home/" class="md-nav__link">
+      <a href="../../math_home/" class="md-nav__link">
         
   
   
@@ -284,18 +295,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -311,7 +324,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Technical Details
@@ -322,18 +335,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
           <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
@@ -349,7 +364,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Math SDK Technical Details
@@ -363,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/general_overview/" class="md-nav__link">
+      <a href="../general_overview/" class="md-nav__link">
         
   
   
@@ -383,10 +398,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/quickstart/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Quickstart Guide
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -397,6 +432,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-your-first-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running your first game
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-game-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Game Outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#larger-simulation-batches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Larger simulation batches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -409,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/rgs_docs/data_format/" class="md-nav__link">
+      <a href="../../rgs_docs/data_format/" class="md-nav__link">
         
   
   
@@ -432,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/directory/" class="md-nav__link">
+      <a href="../directory/" class="md-nav__link">
         
   
   
@@ -493,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/overview_section/state_overview/" class="md-nav__link">
+      <a href="../overview_section/state_overview/" class="md-nav__link">
         
   
   
@@ -516,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/overview_section/game_struct/" class="md-nav__link">
+      <a href="../overview_section/game_struct/" class="md-nav__link">
         
   
   
@@ -539,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/overview_section/game_format/" class="md-nav__link">
+      <a href="../overview_section/game_format/" class="md-nav__link">
         
   
   
@@ -608,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/repeat_info/" class="md-nav__link">
+      <a href="../gamestate_section/repeat_info/" class="md-nav__link">
         
   
   
@@ -669,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/configuration_section/config_overview/" class="md-nav__link">
+      <a href="../gamestate_section/configuration_section/config_overview/" class="md-nav__link">
         
   
   
@@ -692,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/configuration_section/betmode_overview/" class="md-nav__link">
+      <a href="../gamestate_section/configuration_section/betmode_overview/" class="md-nav__link">
         
   
   
@@ -715,7 +813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/configuration_section/betmode_dist/" class="md-nav__link">
+      <a href="../gamestate_section/configuration_section/betmode_dist/" class="md-nav__link">
         
   
   
@@ -784,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/syms_board_section/symbol_info/" class="md-nav__link">
+      <a href="../gamestate_section/syms_board_section/symbol_info/" class="md-nav__link">
         
   
   
@@ -807,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/syms_board_section/board_info/" class="md-nav__link">
+      <a href="../gamestate_section/syms_board_section/board_info/" class="md-nav__link">
         
   
   
@@ -838,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/win_info/" class="md-nav__link">
+      <a href="../gamestate_section/win_info/" class="md-nav__link">
         
   
   
@@ -861,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/events_info/" class="md-nav__link">
+      <a href="../gamestate_section/events_info/" class="md-nav__link">
         
   
   
@@ -884,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/gamestate_section/force_info/" class="md-nav__link">
+      <a href="../gamestate_section/force_info/" class="md-nav__link">
         
   
   
@@ -991,7 +1089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/board_info/" class="md-nav__link">
+      <a href="../source_section/board_info/" class="md-nav__link">
         
   
   
@@ -1014,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/tumble_info/" class="md-nav__link">
+      <a href="../source_section/tumble_info/" class="md-nav__link">
         
   
   
@@ -1037,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/lines_info/" class="md-nav__link">
+      <a href="../source_section/lines_info/" class="md-nav__link">
         
   
   
@@ -1060,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/ways_info/" class="md-nav__link">
+      <a href="../source_section/ways_info/" class="md-nav__link">
         
   
   
@@ -1083,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/scatter_info/" class="md-nav__link">
+      <a href="../source_section/scatter_info/" class="md-nav__link">
         
   
   
@@ -1106,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/cluster_info/" class="md-nav__link">
+      <a href="../source_section/cluster_info/" class="md-nav__link">
         
   
   
@@ -1137,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/config_info/" class="md-nav__link">
+      <a href="../source_section/config_info/" class="md-nav__link">
         
   
   
@@ -1160,7 +1258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/event_info/" class="md-nav__link">
+      <a href="../source_section/event_info/" class="md-nav__link">
         
   
   
@@ -1183,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/executables_info/" class="md-nav__link">
+      <a href="../source_section/executables_info/" class="md-nav__link">
         
   
   
@@ -1206,7 +1304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/state_info/" class="md-nav__link">
+      <a href="../source_section/state_info/" class="md-nav__link">
         
   
   
@@ -1229,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/win_manager/" class="md-nav__link">
+      <a href="../source_section/win_manager/" class="md-nav__link">
         
   
   
@@ -1252,7 +1350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/source_section/file_info/" class="md-nav__link">
+      <a href="../source_section/file_info/" class="md-nav__link">
         
   
   
@@ -1283,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/utils_section/utilities/" class="md-nav__link">
+      <a href="../utils_section/utilities/" class="md-nav__link">
         
   
   
@@ -1306,7 +1404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/sample_section/sample_games/" class="md-nav__link">
+      <a href="../sample_section/sample_games/" class="md-nav__link">
         
   
   
@@ -1329,7 +1427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/uploads_section/upload_info/" class="md-nav__link">
+      <a href="../uploads_section/upload_info/" class="md-nav__link">
         
   
   
@@ -1352,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/math_docs/optimization_section/optimization_algorithm/" class="md-nav__link">
+      <a href="../optimization_section/optimization_algorithm/" class="md-nav__link">
         
   
   
@@ -1421,7 +1519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/dependencies/" class="md-nav__link">
+      <a href="../../fe_docs/dependencies/" class="md-nav__link">
         
   
   
@@ -1444,7 +1542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/get_started/" class="md-nav__link">
+      <a href="../../fe_docs/get_started/" class="md-nav__link">
         
   
   
@@ -1467,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/explore_sb/" class="md-nav__link">
+      <a href="../../fe_docs/explore_sb/" class="md-nav__link">
         
   
   
@@ -1490,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/flowchart/" class="md-nav__link">
+      <a href="../../fe_docs/flowchart/" class="md-nav__link">
         
   
   
@@ -1513,7 +1611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/task_bd/" class="md-nav__link">
+      <a href="../../fe_docs/task_bd/" class="md-nav__link">
         
   
   
@@ -1536,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/steps/" class="md-nav__link">
+      <a href="../../fe_docs/steps/" class="md-nav__link">
         
   
   
@@ -1559,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/file_struct/" class="md-nav__link">
+      <a href="../../fe_docs/file_struct/" class="md-nav__link">
         
   
   
@@ -1582,7 +1680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/context/" class="md-nav__link">
+      <a href="../../fe_docs/context/" class="md-nav__link">
         
   
   
@@ -1605,7 +1703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/fe_docs/ui/" class="md-nav__link">
+      <a href="../../fe_docs/ui/" class="md-nav__link">
         
   
   
@@ -1636,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/StakeEngine/math-sdk.git/rgs_docs/RGS/" class="md-nav__link">
+      <a href="../../rgs_docs/RGS/" class="md-nav__link">
         
   
   
@@ -1677,6 +1775,59 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#running-your-first-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running your first game
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run-file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-game-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Game Outputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#larger-simulation-batches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Larger simulation batches
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1687,8 +1838,122 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+  <h1>Quickstart Guide</h1>
+
+<h2 id="running-your-first-game">Running your first game</h2>
+<p>There are several example games provided within <code>/games/</code>, showing how common slot mechanics may be implemented. As an example let's look at <code>games/0_0_lines/</code>, a 3-row, 5-reel game paying on 20 win-lines. Wins involving 3 or more like symbols will award an amount described by <code>GameConfig.(paytable/payines)</code>.</p>
+<h2 id="run-file">Run-file</h2>
+<p>Simulation parameters including number of simulations, payout statistics, optimization conditions, which modes to run etc.. are all handled within <code>run.py</code>. </p>
+<p>Using the default settings, running:</p>
+<pre><code class="language-sh">python3 run games/0_0_lines/run.py 
+</code></pre>
+<p>will output all the files required by the RGS. All required files to publish math results are found within the <code>library/publish_files/</code> folder. Even if this math-sdk is not being used to generate math results, the <em>books</em>, <em>lookup-tables</em> and <em>index</em> file are required for publication. </p>
+<h2 id="testing-game-outputs">Testing Game Outputs</h2>
+<p>To see example output files in human-readable form, lets simulate 100 results without compression in order to inspect the JSON output, we can alter the following variables within <code>run.py</code>:</p>
+<pre><code class="language-python">num_threads = 1
+compression = False
+
+num_sim_args = {
+    &quot;base&quot;: 100,
+    &quot;bonus&quot;: 100,
+}
+
+run_conditions = {
+    &quot;run_sims&quot;: True,
+    &quot;run_optimization&quot;: False,
+    &quot;run_analysis&quot;: False
+}
+</code></pre>
+<p>When setting <code>num_sim_args</code>, we are essentially running the function <code>run_spin()</code> within <code>gamestate.py</code> 100 times, with simulation criteria being assigned within the <code>GameConfig()</code> class. We can see which criteria (basegame, 0-wins, feature games, max-wins etc..) have been applied to which simulation within the <code>library/lookup_tables/lookUpTableIdToCriteria_&lt;mode&gt;.csv</code> file. Here, we will not run the optimization or analysis because 100 results does not give a large enough range of results to approach large-scale statistics. We only need 1 CPU thread, so we can change this from 10 to 1 since it should only a take a second or two to run. Inspecting the output file, <code>library/books/books_base.jsonl</code> shows each simulation, identified by <code>id</code> (1-100). Each simulation-id has an <code>events</code> tag, which communicates to the front-end framework which symbols are revealed, win positions and amounts, and any of game-specific logic. Each simulation has a <code>payoutMultiplier</code> value which is the final payout amount for that round. This value directly corresponds to the value in <code>library/lookup_tables/lookUpTable_base.csv</code>. When a round-response is returned from by the RGS from the <code>play/</code> API, it is the contents of the <code>events</code> tag which is returned in the response body. </p>
+<p>If we look at the results for, say, simulation 58:</p>
+<pre><code class="language-json">{
+    &quot;id&quot;: 58,
+    &quot;payoutMultiplier&quot;: 10,
+    &quot;events&quot;: [
+        {
+            &quot;index&quot;: 0,
+            &quot;type&quot;: &quot;reveal&quot;,
+            &quot;board&quot;:[...],
+            &quot;paddingPositions&quot;: [...],
+            &quot;gameType&quot;: &quot;basegame&quot;,
+            &quot;anticipation&quot;: [...]
+        },
+        {
+            &quot;index&quot;: 1,
+            &quot;type&quot;: &quot;winInfo&quot;,
+            &quot;totalWin&quot;: 10,
+            &quot;wins&quot;: [
+                {
+                    &quot;symbol&quot;: &quot;L5&quot;,
+                    &quot;kind&quot;: 3,
+                    &quot;win&quot;: 10,
+                    &quot;positions&quot;: [...],
+                    &quot;meta&quot;: {}
+                }
+            ]
+        },
+        {
+            &quot;index&quot;: 2,
+            &quot;type&quot;: &quot;setWin&quot;,
+            &quot;amount&quot;: 10,
+            &quot;winLevel&quot;: 2
+        },
+        {
+            &quot;index&quot;: 3,
+            &quot;type&quot;: &quot;setTotalWin&quot;,
+            &quot;amount&quot;: 10
+        },
+        {
+            &quot;index&quot;: 4,
+            &quot;type&quot;: &quot;finalWin&quot;,
+            &quot;amount&quot;: 10
+        }
+    ],
+    &quot;criteria&quot;: &quot;basegame&quot;,
+    &quot;baseGameWins&quot;: 0.1,
+    &quot;freeGameWins&quot;: 0.0
+}
+</code></pre>
+<p>This tells up what board-symbols to reveal, the winning positions on this board, the payout amount, and sets the win counters. If we now open the lookup-table file and search for simulation number 58 we see the result: <code>58,1,10</code>, matching what was given to us within the <code>books</code> file. Note that all simulations are initially given a selection weight of <code>1</code> (the second value in each CSV row). The optimization program is what sets these weights to ensure that the game-mode is balanced to a specified RTP.</p>
+<h2 id="larger-simulation-batches">Larger simulation batches</h2>
+<p>When starting with a new game, it is suggested to start by running a small number of simulations saved in uncompressed JSON format for debugging. Once satisfied with the gamestate output, larger simulations should be run. For a production-ready game it is typically recommended to run 100k+ simulations per mode to ensure that there is a diverse range of payout multipliers to optimize over, and to significantly reduce the chances of any single player receiving the same round result more than once. We set the following parameters indicating that we want to use 20 threads for simulating the game-logic for 10,000 simulations per mode, output in compressed (.json.zst) format, we will then use 20 threads when running the optimization algorithm (this will produce modified lookup-tables such as <code>lookUpTable_base_0.csv</code>).</p>
+<pre><code class="language-python">num_sim_args = {
+    &quot;base&quot;: int(1e4),
+    &quot;bonus&quot;: int(1e4),
+}
+
+run_conditions = {
+    &quot;run_sims&quot;: True,
+    &quot;run_optimization&quot;: True,
+    &quot;run_analysis&quot;: True,
+    &quot;upload_data&quot;: False,
+}
+</code></pre>
+<p>In the terminal you should seethe game RTP printed out as each thread finishes</p>
+<pre><code class="language-shell">Thread 0 finished with 1.632 RTP. [baseGame: 0.043, freeGame: 1.588]
+</code></pre>
+<p>Flor the <code>bonus</code> mode, this is telling us that thread 0/10 finished with a total RTP of 163.2%, with 4.3% coming from the basegame (wins on the reveal of Scatter symbols), and 158.8% RTP coming from freegame wins. This is higher than our expected 97%, though we are forcing significantly more max-win simulations than will naturally be awarded, so this is okay. The optimization algorithm will adjust these weights to balance the game properly.</p>
+<p>By setting <code>run_analysis: True</code> we are indicating that we would like to generate a PAR sheet, summarizing key game statistics and hit-rates. This program will use the <code>library/lookup_tables/lookUpTableSegmented_&lt;mode&gt;.csv</code> file to determine which game-types contributed to the final round wins, in conjunction with the pay-table and <code>library/forces/force_record_&lt;mode&gt;.json</code> files to generate frequency and average-win statistics for specific events or win combinations.</p>
+<h2 id="next-steps">Next steps</h2>
+<p>These outputs corresponding directly with example Storybook packages within the <code>web-sdk</code>. It is recommended to take look through this pack to see how these math events are passed and displayed on the frontend.
+If you have your own game in mind you can use one of the sample games provided as a template and implement your own unique rules within the <code>games/&lt;game_name&gt;/</code> directory. You will likely need to specify configuration values for things like multipliers, prize-value etc.. wtihin <code>game_config.py</code>. Then any unique calculations and events should be handled within the games <code>game_executables/game_calculation</code> files. Generally speaking, reusable functions, events or calculation should like with <code>/src/</code>, which one-off game functionality belongs within that games folder <code>/games/&lt;game_id&gt;/</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1730,10 +1995,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/StakeEngine/math-sdk.git/", "features": ["navigation.instant", "navigation.top", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "/StakeEngine/math-sdk.git/assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.top", "search.highlight", "content.code.copy", "content.code.annotate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/StakeEngine/math-sdk.git/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
