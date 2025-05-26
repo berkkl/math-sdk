@@ -1720,8 +1720,9 @@
 <p>This document defines how the provider’s frontend communicates with the Stake Engine endpoints. It includes a detailed description of the core API functionality, along with the corresponding request and response structures.</p>
 <h1 id="url-structure">URL Structure</h1>
 <p>Games are hosted under a predefined URL. Providers should use the parameters below to interact with the RGS on behalf of the user and correctly display game information.</p>
-<pre><code>https://games.stake-engine.com/{{.TeamID}}/{{.GameID}}/{{.GameVersion}}/index.html?sessionID={{.SessionID}}&amp;gameID={{.GameID}}&amp;lang={{.Lang}}&amp;device={{.Device}}&amp;rgs_url={{.RgsUrl}}
+<pre><code>https://{{.TeamName}}.cdn.stake-engine.com/{{.GameID}}/{{.GameVersion}}/index.html?sessionID={{.SessionID}}&amp;lang={{.Lang}}&amp;device={{.Device}}&amp;rgs_url={{.RgsUrl}}
 </code></pre>
+<h3 id="query-params-in-url">Query Params in URL</h3>
 <table>
 <thead>
 <tr>
@@ -1733,10 +1734,6 @@
 <tr>
 <td>sessionID</td>
 <td>Unique session ID for the player. Required for all requests made by the game.</td>
-</tr>
-<tr>
-<td>gameID</td>
-<td>The game’s identifier within the Stake Engine. Used in many API calls.</td>
 </tr>
 <tr>
 <td>lang</td>
@@ -1868,7 +1865,6 @@
 </code></pre>
 <pre><code class="language-json">{
   &quot;sessionID&quot;: &quot;xxxxxxx&quot;,
-  &quot;gameID&quot;: &quot;xxxxxxx&quot;
 }
 </code></pre>
 <h3 id="response">Response</h3>
@@ -1878,16 +1874,11 @@
     &quot;currency&quot;: &quot;USD&quot;
   },
   &quot;config&quot;: {
-    &quot;gameID&quot;: &quot;game_xxx&quot;,
     &quot;minBet&quot;: 100000,
     &quot;maxBet&quot;: 1000000000,
     &quot;stepBet&quot;: 100000,
     &quot;defaultBetLevel&quot;: 1000000,
     &quot;betLevels&quot;: [...],
-    &quot;betModes&quot;: {
-      &quot;BASE&quot;: { &quot;costMultiplier&quot;: 1, &quot;feature&quot;: true, &quot;mode&quot;: &quot;BASE&quot; },
-      &quot;ANTE&quot;: { &quot;costMultiplier&quot;: 1.25, &quot;feature&quot;: true, &quot;mode&quot;: &quot;ANTE&quot; }
-    },
     &quot;jurisdiction&quot;: {
       &quot;socialCasino&quot;: false,
       &quot;disabledFullscreen&quot;: false,
@@ -1920,7 +1911,6 @@
 <h3 id="request_2">Request</h3>
 <pre><code class="language-json">{
   &quot;amount&quot;: 100000,
-  &quot;gameID&quot;: &quot;xxxxxx&quot;,
   &quot;sessionID&quot;: &quot;xxxxxxx&quot;,
   &quot;mode&quot;: &quot;BASE&quot;
 }
@@ -1940,8 +1930,7 @@
 <pre><code class="language-http">POST /wallet/endround
 </code></pre>
 <pre><code class="language-json">{
-  &quot;sessionID&quot;: &quot;xxxxxx&quot;,
-  &quot;gameID&quot;: &quot;xxxxxx&quot;
+  &quot;sessionID&quot;: &quot;xxxxxx&quot;
 }
 </code></pre>
 <h3 id="response_3">Response</h3>
@@ -1960,7 +1949,6 @@
 </code></pre>
 <pre><code class="language-json">{
   &quot;sessionID&quot;: &quot;xxxxxx&quot;,
-  &quot;gameID&quot;: &quot;xxxxxx&quot;,
   &quot;event&quot;: &quot;xxxxxx&quot;
 }
 </code></pre>
