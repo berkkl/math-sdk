@@ -20,6 +20,8 @@ if __name__ == "__main__":
     num_sim_args = {
         "base": int(1e4),
         "bonus": int(1e4),
+        "super": int(1e4),
+        "mega": int(1e4),
     }
 
     run_conditions = {
@@ -53,7 +55,11 @@ if __name__ == "__main__":
         generate_configs(gamestate)
 
     if run_conditions["run_analysis"]:
-        custom_keys = [{"symbol": "scatter"}]
+        custom_keys = [
+            {"symbol": "scatter", "kind": "3"},
+            {"symbol": "scatter", "kind": "4"},
+            {"symbol": "scatter", "kind": "5"},
+        ]
         create_stat_sheet(gamestate, custom_keys=custom_keys)
 
     if run_conditions["run_format_checks"]:

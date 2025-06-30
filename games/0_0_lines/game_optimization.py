@@ -18,8 +18,14 @@ class OptimizationSetup:
                 "conditions": {
                     "wincap": ConstructConditions(rtp=0.01, av_win=5000, search_conditions=5000).return_dict(),
                     "0": ConstructConditions(rtp=0, av_win=0, search_conditions=0).return_dict(),
+                    "megafreegame": ConstructConditions(
+                        rtp=0.07, hr=1600, search_conditions={"symbol": "scatter", "kind": "5"}
+                    ).return_dict(),
+                    "superfreegame": ConstructConditions(
+                        rtp=0.10, hr=800, search_conditions={"symbol": "scatter", "kind": "4"}
+                    ).return_dict(),
                     "freegame": ConstructConditions(
-                        rtp=0.37, hr=200, search_conditions={"symbol": "scatter"}
+                        rtp=0.20, hr=200, search_conditions={"symbol": "scatter", "kind": "3"}
                     ).return_dict(),
                     "basegame": ConstructConditions(hr=3.5, rtp=0.59).return_dict(),
                 },
@@ -92,6 +98,42 @@ class OptimizationSetup:
                         },
                     ]
                 ).return_dict(),
+                "parameters": ConstructParameters(
+                    num_show=5000,
+                    num_per_fence=10000,
+                    min_m2m=4,
+                    max_m2m=8,
+                    pmb_rtp=1.0,
+                    sim_trials=5000,
+                    test_spins=[10, 20, 50],
+                    test_weights=[0.6, 0.2, 0.2],
+                    score_type="rtp",
+                ).return_dict(),
+            },
+            "super": {
+                "conditions": {
+                    "wincap": ConstructConditions(rtp=0.01, av_win=5000, search_conditions=5000).return_dict(),
+                    "superfreegame": ConstructConditions(rtp=0.96, hr="x").return_dict(),
+                },
+                "scaling": ConstructScaling([]).return_dict(),
+                "parameters": ConstructParameters(
+                    num_show=5000,
+                    num_per_fence=10000,
+                    min_m2m=4,
+                    max_m2m=8,
+                    pmb_rtp=1.0,
+                    sim_trials=5000,
+                    test_spins=[10, 20, 50],
+                    test_weights=[0.6, 0.2, 0.2],
+                    score_type="rtp",
+                ).return_dict(),
+            },
+            "mega": {
+                "conditions": {
+                    "wincap": ConstructConditions(rtp=0.01, av_win=5000, search_conditions=5000).return_dict(),
+                    "megafreegame": ConstructConditions(rtp=0.96, hr="x").return_dict(),
+                },
+                "scaling": ConstructScaling([]).return_dict(),
                 "parameters": ConstructParameters(
                     num_show=5000,
                     num_per_fence=10000,

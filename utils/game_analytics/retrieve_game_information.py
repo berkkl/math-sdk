@@ -40,11 +40,11 @@ class GameInformation:
         else:
             assert isinstance(custom_keys, list), "Search keys must be a list of dictionaries."
             key_str = []
-            key_dict = {}
             for d in custom_keys:
+                key_dict = {}
                 for k, v in d.items():
                     key_dict[str(k)] = str(v)
-                key_str.append(key_dict)
+                    key_str.append(key_dict)
             self.custom_keys = key_str
 
         if analysis_ranges is not None:

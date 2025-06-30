@@ -217,7 +217,7 @@ class GameConfig(Config):
             self.freegame_type: min(self.freespin_triggers[self.freegame_type].keys()) - 1,
         }
         # Reels
-        reels = {"BR0": "BR0.csv", "FR0": "FR0.csv", "WCAP": "FRWCAP.csv"}
+        reels = {"BR0": "BR0.csv", "FR0": "FR0.csv", "SFR0": "FR0.csv", "WCAP": "FRWCAP.csv"}
         self.reels = {}
         for r, f in reels.items():
             self.reels[r] = self.read_reels_csv(os.path.join(self.reels_path, f))
@@ -256,6 +256,56 @@ class GameConfig(Config):
                         },
                     ),
                     Distribution(
+                        criteria="megafreegame",
+                        quota=0.1,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1},
+                            },
+                            "scatter_triggers": {5: 1},  # Trigger super-game with 5-scatters
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {
+                                    2: 50,
+                                    3: 80,
+                                    4: 60,
+                                    5: 30,
+                                    10: 25,
+                                    20: 15,
+                                    50: 10,
+                                },
+                            },
+                            "force_wincap": False,
+                            "force_freegame": True,
+                        },
+                    ),
+                    Distribution(
+                        criteria="superfreegame",
+                        quota=0.1,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1},
+                            },
+                            "scatter_triggers": {4: 1},  # Trigger super-game with 5-scatters
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {
+                                    2: 50,
+                                    3: 80,
+                                    4: 60,
+                                    5: 30,
+                                    10: 25,
+                                    20: 15,
+                                    50: 10,
+                                },
+                            },
+                            "force_wincap": False,
+                            "force_freegame": True,
+                        },
+                    ),
+                    Distribution(
                         criteria="freegame",
                         quota=0.1,
                         conditions={
@@ -263,7 +313,7 @@ class GameConfig(Config):
                                 self.basegame_type: {"BR0": 1},
                                 self.freegame_type: {"FR0": 1},
                             },
-                            "scatter_triggers": {3: 50, 4: 20, 5: 5},
+                            "scatter_triggers": {3: 1},
                             "mult_values": {
                                 self.basegame_type: {1: 1},
                                 self.freegame_type: {
@@ -282,7 +332,7 @@ class GameConfig(Config):
                     ),
                     Distribution(
                         criteria="0",
-                        quota=0.4,
+                        quota=0.3,
                         win_criteria=0.0,
                         conditions={
                             "reel_weights": {self.basegame_type: {"BR0": 1}},
@@ -296,7 +346,7 @@ class GameConfig(Config):
                     ),
                     Distribution(
                         criteria="basegame",
-                        quota=0.5,
+                        quota=0.4,
                         conditions={
                             "reel_weights": {self.basegame_type: {"BR0": 1}},
                             "mult_values": {self.basegame_type: {1: 1}},
@@ -328,7 +378,7 @@ class GameConfig(Config):
                                 self.basegame_type: {1: 1},
                                 self.freegame_type: {2: 10, 3: 20, 4: 50, 5: 60, 10: 100, 20: 90, 50: 50},
                             },
-                            "scatter_triggers": {4: 1, 5: 2},
+                            "scatter_triggers": {3: 1},
                             "force_wincap": True,
                             "force_freegame": True,
                         },
@@ -341,7 +391,99 @@ class GameConfig(Config):
                                 self.basegame_type: {"BR0": 1},
                                 self.freegame_type: {"FR0": 1},
                             },
-                            "scatter_triggers": {3: 20, 4: 10, 5: 2},
+                            "scatter_triggers": {3: 1},
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {2: 100, 3: 80, 4: 50, 5: 20, 10: 10, 20: 5, 50: 1},
+                            },
+                            "force_wincap": False,
+                            "force_freegame": True,
+                        },
+                    ),
+                ],
+            ),
+            BetMode(
+                name="super",
+                cost=200.0,
+                rtp=self.rtp,
+                max_win=self.wincap,
+                auto_close_disabled=False,
+                is_feature=False,
+                is_buybonus=True,
+                distributions=[
+                    Distribution(
+                        criteria="wincap",
+                        quota=0.001,
+                        win_criteria=self.wincap,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1, "WCAP": 5},
+                            },
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {2: 10, 3: 20, 4: 50, 5: 60, 10: 100, 20: 90, 50: 50},
+                            },
+                            "scatter_triggers": {4: 1},
+                            "force_wincap": True,
+                            "force_freegame": True,
+                        },
+                    ),
+                    Distribution(
+                        criteria="superfreegame",
+                        quota=0.999,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1},
+                            },
+                            "scatter_triggers": {4: 1},
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {2: 100, 3: 80, 4: 50, 5: 20, 10: 10, 20: 5, 50: 1},
+                            },
+                            "force_wincap": False,
+                            "force_freegame": True,
+                        },
+                    ),
+                ],
+            ),
+            BetMode(
+                name="mega",
+                cost=300.0,
+                rtp=self.rtp,
+                max_win=self.wincap,
+                auto_close_disabled=False,
+                is_feature=False,
+                is_buybonus=True,
+                distributions=[
+                    Distribution(
+                        criteria="wincap",
+                        quota=0.001,
+                        win_criteria=self.wincap,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1, "WCAP": 5},
+                            },
+                            "mult_values": {
+                                self.basegame_type: {1: 1},
+                                self.freegame_type: {2: 10, 3: 20, 4: 50, 5: 60, 10: 100, 20: 90, 50: 50},
+                            },
+                            "scatter_triggers": {5: 1},
+                            "force_wincap": True,
+                            "force_freegame": True,
+                        },
+                    ),
+                    Distribution(
+                        criteria="megafreegame",
+                        quota=0.999,
+                        conditions={
+                            "reel_weights": {
+                                self.basegame_type: {"BR0": 1},
+                                self.freegame_type: {"SFR0": 1},
+                            },
+                            "scatter_triggers": {5: 1},
                             "mult_values": {
                                 self.basegame_type: {1: 1},
                                 self.freegame_type: {2: 100, 3: 80, 4: 50, 5: 20, 10: 10, 20: 5, 50: 1},
