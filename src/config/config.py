@@ -13,7 +13,7 @@ class Config:
 
     def __init__(self):
         self.rtp = 0.97
-        self.game_id = "0_0_asample"
+        self.game_id = "0_0_sample"
         self.provider_name = "sample_provider"
         self.provider_number = 1
         self.game_name = "sample_lines"
@@ -25,8 +25,8 @@ class Config:
         self.wincap = 5000
 
         # Game details
-        self.reels = 5
-        self.row = 3
+        self.num_reels = 5
+        self.num_rows = 3
         self.paytable = {}  # Symbol information assumes ('kind','name) format
         self.special_symbols = {None: []}
         self.special_sybol_names = set()
